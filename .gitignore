@@ -37,6 +37,10 @@ dist-ssr
 !.vscode/extensions.json
 .idea
 .DS_Store
+# macOS resource forks (what unzipping an archive on a Mac leaves behind)
+._*
+*.bak
+*.orig
 *.suo
 *.ntvs*
 *.njsproj

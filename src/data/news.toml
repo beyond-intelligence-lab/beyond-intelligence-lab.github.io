@@ -1,0 +1,33 @@
+# 实验室动态 —— 改这个文件就够了，推送到 main 后由 GitHub Actions 自动发布。
+#
+# 每条用 [[news]] 声明，四个必填字段加一个可选字段：
+#   id    = "cvpr-2026"                          唯一标识，重复会在构建时报错
+#   date  = "2026-08"                            默认精确到月；要写到日就写 "2026-08-26"
+#   en    = "**1 paper** accepted at CVPR 2026." 英文界面显示的文字
+#   zh    = "**1 篇文章**被 CVPR 2026 接收。"      中文界面显示的文字
+#   link  = "https://…"                          可选，条目会变成这个链接
+#
+# en / zh 里可以用 **…** 包住要加粗的部分（数字、论文、会议、人名）。只认这一种
+# 标记，其余字符都按纯文本显示，不会当成 HTML。个人主页链接请写进 group.toml。
+#
+# 首页按 date 从新到旧排成时间轴，只展示最近 5 条（改 src/pages/Home.tsx 的
+# RECENT_COUNT 可调）。文件名拼错、字段名拼错、id 重复、日期不合法，都会在开发时
+# 报错、构建（CI）时直接失败，不会静默丢内容。
+
+[[news]]
+id = "eurosys-2027"
+date = "2026-08"
+en = "**1 paper** accepted at **EuroSys 2027 Spring Cycle**. Congratulations to **Zhengxiang**!"
+zh = "**1 篇文章**被 **EuroSys 2027 Spring Cycle** 接收，恭喜 **Zhengxiang**！"
+
+[[news]]
+id = "acm-mm-2026"
+date = "2026-07"
+en = "**3 papers** accepted at **ACM MM 2026**. Congratulations to **Zhuoqiang**, **Xuezhen** and **Zewei**!"
+zh = "**3 篇文章**被 **ACM MM 2026** 接收，恭喜 **Zhuoqiang**、**Xuezhen**、**Zewei**！"
+
+[[news]]
+id = "cvpr-2026"
+date = "2026-02"
+en = "**2 papers** accepted at **CVPR 2026**. Congratulations to **Tiancheng** and **Yujie**!"
+zh = "**2 篇文章**被 **CVPR 2026** 接收，恭喜 **Tiancheng**、**Yujie**！"

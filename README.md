@@ -10,4 +10,4 @@ pnpm preview  # 本地预览生产构建
 pnpm lint
 ```
 
-论文数据改 `src/data/publications.toml`，字段说明在文件头部注释里。
+内容数据：论文 `src/data/publications.toml`、团队成员 `src/data/group.toml`、首页动态 `src/data/news.toml`，字段说明都在文件头部注释里。改这些文件即可更新站点，构建时会校验，字段写错会直接失败。

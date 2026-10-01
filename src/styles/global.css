@@ -131,6 +131,12 @@ h4 {
   text-wrap: balance;
 }
 
+/* Pinned rather than left to the UA's `bolder`, so emphasis always lands on the
+   700 face that `src/main.tsx` loads. */
+strong {
+  font-weight: 700;
+}
+
 p {
   text-wrap: pretty;
 }

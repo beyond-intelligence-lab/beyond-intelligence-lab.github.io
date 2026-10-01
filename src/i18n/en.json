@@ -7,13 +7,23 @@
     "publications": "Publications",
     "group": "Group"
   },
+  "group": {
+    "teacher": "Teacher",
+    "phdStudent": "PhD Students",
+    "masterStudent": "Master Students",
+    "alumni": "Alumni"
+  },
+  "home": {
+    "slogan": "Beyond Intelligence",
+    "lead": "TBD",
+    "newsTitle": "Recent news"
+  },
   "publications": {
     "filterAll": "All",
     "filterLabel": "Filter publications by research topic",
     "listLabel": "Publication list",
     "shown": "Showing {count} of {total} publications",
     "empty": "Publications are on the way — check back soon.",
-    "newTab": "opens in a new tab",
     "links": {
       "paper": "Paper",
       "code": "Code",
@@ -27,7 +37,8 @@
     "openMenu": "Open navigation menu",
     "closeMenu": "Close navigation menu",
     "toggleTheme": "Switch between light and dark theme",
-    "toggleLanguage": "Switch language"
+    "toggleLanguage": "Switch language",
+    "newTab": "opens in a new tab"
   },
   "theme": {
     "toLight": "Switch to light theme",

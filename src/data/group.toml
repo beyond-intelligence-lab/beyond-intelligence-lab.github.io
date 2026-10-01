@@ -1,0 +1,118 @@
+# 团队成员 —— 改这个文件就够了，推送到 main 后由 GitHub Actions 自动发布。
+#
+# 四组，组内按文件里的顺序展示，某组留空则该栏不显示：
+#   [[teacher]]        教师
+#   [[phdStudent]]     博士生
+#   [[masterStudent]]  硕士生
+#   [[alumni]]         已毕业学生
+#
+# 每个人只写两三个字段（avatar / homepage 可选）：
+#   en = "Chaoyue Niu"                          英文界面显示的名字
+#   zh = "牛超越"                                中文界面显示的名字
+#   avatar = "/images/avatars/chaoyue-niu.webp" 头像放 public/images/avatars/；不写则显示姓名首字母
+#   homepage = "https://unikeen.github.io"      个人主页（可选）；写了名字就变成链接，点击跳转
+#
+# 拼错分组名或字段名会在开发时报错、构建（CI）时直接失败，不会静默丢人。
+
+[[teacher]]
+en = "Fan Wu"
+zh = "吴帆"
+avatar = "/images/avatars/fan-wu.webp"
+homepage = "https://www.cs.sjtu.edu.cn/en/jiaoshiml/wufan.html"
+
+[[teacher]]
+en = "Chaoyue Niu"
+zh = "牛超越"
+avatar = "/images/avatars/chaoyue-niu.webp"
+homepage = "https://www.cs.sjtu.edu.cn/en/jiaoshiml/niuchaoyue.html"
+
+[[phdStudent]]
+en = "Tiancheng Fang"
+zh = "方天成"
+
+[[phdStudent]]
+en = "Hang Zeng"
+zh = "曾航"
+
+[[phdStudent]]
+en = "Zewei Xin"
+zh = "辛泽玮"
+homepage = "https://seelexia.github.io/"
+
+[[phdStudent]]
+en = "Xuezhen Tu"
+zh = "屠雪真"
+
+[[phdStudent]]
+en = "Zhengxiang Huang"
+zh = "黄正翔"
+
+[[phdStudent]]
+en = "Gucongcong Fan"
+zh = "范顾聪聪"
+
+[[phdStudent]]
+en = "Jiarui Zhang"
+zh = "张家瑞"
+
+[[phdStudent]]
+en = "Yujie Sun"
+zh = "孙瑜杰"
+homepage = "https://unikeen.github.io"
+
+[[phdStudent]]
+en = "Xinyi Su"
+zh = "苏心怡"
+
+[[phdStudent]]
+en = "Ziheng Liu"
+zh = "刘子恒"
+
+[[phdStudent]]
+en = "Yijie Ma"
+zh = "马逸杰"
+
+[[phdStudent]]
+en = "Mingyu Lin"
+zh = "林明宇"
+
+[[phdStudent]]
+en = "Zeyu Zhao"
+zh = "赵泽宇"
+
+[[masterStudent]]
+en = "Yutong Dai"
+zh = "戴语彤"
+
+[[masterStudent]]
+en = "Junhui Lu"
+zh = "陆俊辉"
+
+[[masterStudent]]
+en = "Hui Fu"
+zh = "付慧"
+
+[[masterStudent]]
+en = "Zhuoqiang Cai"
+zh = "蔡卓强"
+homepage = "https://vhahahav.github.io"
+
+[[masterStudent]]
+en = "Tianxing Wang"
+zh = "王天行"
+
+[[masterStudent]]
+en = "Bohao Ai"
+zh = "艾博昊"
+
+[[masterStudent]]
+en = "Shengheng Chen"
+zh = "陈升恒"
+
+[[masterStudent]]
+en = "Zhihao Ji"
+zh = "姬智昊"
+
+[[masterStudent]]
+en = "Jiarui Xue"
+zh = "薛佳锐"

@@ -5,6 +5,8 @@ import { parse } from 'smol-toml'
 import { defineConfig } from 'vite'
 import type { Plugin } from 'vite'
 
+import { parseGroupData } from './src/data/group-schema.ts'
+import { parseNewsData } from './src/data/news-schema.ts'
 import { parsePublicationData } from './src/data/publication-schema.ts'
 
 /**
@@ -42,7 +44,14 @@ function tomlPlugin(validators: Record<string, (raw: unknown) => unknown>): Plug
 export default defineConfig({
   // Served from the domain root (beyond-intelligence-lab.github.io), so no sub-path.
   base: '/',
-  plugins: [react(), tomlPlugin({ 'publications.toml': parsePublicationData })],
+  plugins: [
+    react(),
+    tomlPlugin({
+      'publications.toml': parsePublicationData,
+      'group.toml': parseGroupData,
+      'news.toml': parseNewsData,
+    }),
+  ],
   build: {
     outDir: 'dist',
     sourcemap: true,

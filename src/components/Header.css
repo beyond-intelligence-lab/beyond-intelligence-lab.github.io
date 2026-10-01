@@ -21,6 +21,9 @@
   margin-right: auto;
   font-size: var(--step--1);
   line-height: 1.2;
+  /* On a phone the row is tight: everything keeps its width, and the wordmark
+     is the only thing allowed to give (it ellipsizes) — never the icons. */
+  min-width: 0;
 }
 
 /* The app icon brings its own colours, so unlike the old glyph mark it takes
@@ -29,23 +32,20 @@
 .header__mark {
   width: 30px;
   height: 30px;
+  flex-shrink: 0;
 }
 
+/* Fluid: ~14px on a phone (where the icon buttons need the room) up to the
+   same 1.35rem the scale tops out at on a desktop. */
 .header__brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.header__brand-text strong {
+  font-size: clamp(0.85rem, 0.75rem + 0.7vw, 1.35rem);
   font-weight: 600;
+  line-height: 1.4;
   letter-spacing: -0.01em;
-}
-
-.header__brand-text span {
-  color: var(--text-muted);
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header__nav-list {
@@ -80,6 +80,9 @@
   display: flex;
   align-items: center;
   gap: 0.35rem;
+  /* Buttons keep their size when the row runs short — the icons used to get
+     squashed to a few pixels instead. */
+  flex-shrink: 0;
 }
 
 .icon-button {
@@ -152,6 +155,24 @@
 
   .icon-button--menu {
     display: inline-flex;
+  }
+
+  /* Phone: the globe reads on its own (the button carries an aria-label), and
+     dropping "EN" plus tighter padding is what buys the wordmark its room. */
+  .icon-button__text {
+    display: none;
+  }
+
+  .icon-button {
+    padding: 0.4rem 0.45rem;
+  }
+}
+
+/* Narrow phones: one more step down so the whole wordmark still fits beside
+   the buttons instead of ellipsizing. */
+@media (max-width: 30rem) {
+  .header__brand-text {
+    font-size: 0.85rem;
   }
 }
 

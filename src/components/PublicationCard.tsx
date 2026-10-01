@@ -62,7 +62,7 @@ export default function PublicationCard({ publication }: PublicationCardProps) {
                   >
                     <Icon />
                     {t.publications.links[link.kind]}
-                    <span className="visually-hidden">（{t.publications.newTab}）</span>
+                    <span className="visually-hidden">（{t.a11y.newTab}）</span>
                   </a>
                 </li>
               )

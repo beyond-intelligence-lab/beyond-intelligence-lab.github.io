@@ -40,10 +40,7 @@ export default function Header() {
             width={30}
             height={30}
           />
-          <span className="header__brand-text">
-            <strong>Beyond Intelligence</strong>
-            <span>Lab</span>
-          </span>
+          <span className="header__brand-text">{t.site.name}</span>
         </Link>
 
         <nav

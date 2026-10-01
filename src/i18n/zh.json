@@ -7,13 +7,23 @@
     "publications": "论文发表",
     "group": "团队"
   },
+  "group": {
+    "teacher": "教师",
+    "phdStudent": "博士生",
+    "masterStudent": "硕士生",
+    "alumni": "已毕业学生"
+  },
+  "home": {
+    "slogan": "Beyond Intelligence",
+    "lead": "TBD",
+    "newsTitle": "最新动态"
+  },
   "publications": {
     "filterAll": "全部",
     "filterLabel": "按研究方向筛选论文",
     "listLabel": "论文列表",
     "shown": "显示 {count} / {total} 篇论文",
     "empty": "论文列表即将更新，敬请期待。",
-    "newTab": "在新标签页打开",
     "links": {
       "paper": "论文",
       "code": "代码",
@@ -27,7 +37,8 @@
     "openMenu": "打开导航菜单",
     "closeMenu": "关闭导航菜单",
     "toggleTheme": "在浅色与深色主题之间切换",
-    "toggleLanguage": "切换语言"
+    "toggleLanguage": "切换语言",
+    "newTab": "在新标签页打开"
   },
   "theme": {
     "toLight": "切换到浅色主题",

@@ -11,6 +11,11 @@
  * data then fails `pnpm build` (and CI) instead of the browser.
  */
 
+// Explicit extension: this module is also pulled into the node project (via
+// `vite.config.ts`), whose nodenext resolution requires it. Both tsconfigs
+// allow `.ts` imports, and Vite resolves them as usual.
+import { isRecord, readString, reportProblems } from './schema-utils.ts'
+
 export const LINK_KINDS = ['paper', 'code', 'project', 'slides', 'arxiv'] as const
 
 export type LinkKind = (typeof LINK_KINDS)[number]
@@ -61,15 +66,6 @@ const PUBLICATION_KEYS = [
 ]
 const MIN_YEAR = 1900
 const MAX_YEAR = 2100
-
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return typeof value === 'object' && value !== null && !Array.isArray(value)
-}
-
-/** Returns the string when it is usable, `null` otherwise (so callers can report). */
-function readString(value: unknown): string | null {
-  return typeof value === 'string' && value.trim() !== '' ? value : null
-}
 
 function isLinkUrl(value: string): boolean {
   return value.startsWith('https://') || value.startsWith('http://') || value.startsWith('/')
@@ -250,9 +246,7 @@ export function parsePublicationData(
     })
   }
 
-  if (problems.length > 0) {
-    throw new Error(`${label} 有问题：\n${problems.map((problem) => `  - ${problem}`).join('\n')}`)
-  }
+  reportProblems(problems, label)
 
   return { topics, publications }
 }
