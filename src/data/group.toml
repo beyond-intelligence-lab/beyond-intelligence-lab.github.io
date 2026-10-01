@@ -71,14 +71,11 @@ zh = "苏心怡"
 [[phdStudent]]
 en = "Ziheng Liu"
 zh = "刘子恒"
+avatar = "/images/avatars/ziheng-liu.webp"
 
 [[phdStudent]]
 en = "Yijie Ma"
 zh = "马逸杰"
-
-[[phdStudent]]
-en = "Mingyu Lin"
-zh = "林明宇"
 
 [[phdStudent]]
 en = "Zeyu Zhao"
@@ -113,7 +110,7 @@ zh = "艾博昊"
 [[masterStudent]]
 en = "Shengheng Chen"
 zh = "陈升恒"
-avatar = "/images/avatars/shengheng-chen.webp"
+avatar = "/images/avatars/shengheng-chen.jpeg"
 
 [[masterStudent]]
 en = "Zhihao Ji"
@@ -122,3 +119,7 @@ zh = "姬智昊"
 [[masterStudent]]
 en = "Jiarui Xue"
 zh = "薛佳锐"
+
+[[masterStudent]]
+en = "Mingyu Lin"
+zh = "林明宇"
