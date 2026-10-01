@@ -28,7 +28,8 @@
 .publication__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  padding: 0.5rem;
+  object-fit: contain;
 }
 
 .publication__media--empty {
@@ -124,8 +125,7 @@
   }
 
   /* Stacked, a full-width 4:3 box is mostly empty air. `width` is explicit so
-     the cap shortens the box instead of the aspect ratio narrowing it, and the
-     cover crop takes care of real screenshots. */
+     the cap shortens the box instead of the aspect ratio narrowing it. */
   .publication__media {
     width: 100%;
     max-height: 11rem;

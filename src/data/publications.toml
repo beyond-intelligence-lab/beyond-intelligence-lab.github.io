@@ -63,6 +63,7 @@ authors = ["Tianxing Wang", "Mingming Zhao", "Shuai Huang", "Huiyang Xu", "Chaoy
 venues = ["arXiv"]
 year = 2026
 topics = ["agent"]
+image = "/publications/trove-2026.png"
 links = { arxiv = "https://arxiv.org/abs/2609.05019" }
 
 [[publication]]
@@ -72,6 +73,7 @@ authors = ["Zhuoqiang Cai", "Yujie Sun", "Chaoyue Niu", "Hongyun Yu", "Zhiwen Ch
 venues = ["ACM MM 2026"]
 year = 2026
 topics = ["vision-3d"]
+image = "/publications/echo-2026.png"
 links = { arxiv = "https://arxiv.org/abs/2609.05506" }
 
 [[publication]]
@@ -81,6 +83,7 @@ authors = ["Yijie Ma", "Chaoyue Niu", "Fan Wu", "Guihai Chen"]
 venues = ["arXiv"]
 year = 2026
 topics = ["agent"]
+image = "/publications/reflection-gui-agents-2026.png"
 links = { arxiv = "https://arxiv.org/abs/2608.24015" }
 
 [[publication]]
@@ -117,6 +120,7 @@ authors = ["Jiarui Zhang", "Xiangyu Liu", "Yong Hu", "Chaoyue Niu", "Hang Zeng",
 venues = ["NeurIPS 2026"]
 year = 2026
 topics = ["routing"]
+image = "/publications/llm-routing-multiturn-2026.png"
 links = { arxiv = "https://arxiv.org/abs/2604.12385" }
 
 [[publication]]
@@ -126,6 +130,7 @@ authors = ["Xuezhen Tu", "Jingyu Wu", "Fangyu Kang", "Qingpeng Nong", "Kaijin Zh
 venues = ["arXiv"]
 year = 2026
 topics = ["vision-3d"]
+image = "/publications/video-grounding-2026.png"
 links = { arxiv = "https://arxiv.org/abs/2604.08014" }
 
 [[publication]]
@@ -135,6 +140,7 @@ authors = ["Yujie Sun", "Zhuoqiang Cai", "Chaoyue Niu", "Jianchuan Chen", "Zhiwe
 venues = ["CVPR 2026"]
 year = 2026
 topics = ["vision-3d"]
+image = "/publications/fhavatar-2026.png"
 links = { arxiv = "https://arxiv.org/abs/2603.23345" }
 
 [[publication]]
@@ -144,6 +150,7 @@ authors = ["Tiancheng Fang", "Bowen Pan", "Lingxi Chen", "Jiangjing Lyu", "Cheng
 venues = ["CVPR 2026"]
 year = 2026
 topics = ["vision-3d"]
+image = "/publications/viaformer-2026.png"
 links = { paper = "https://openaccess.thecvf.com/content/CVPR2026/html/Fang_VIAFormer_Voxel-Image_Alignment_Transformer_for_High-Fidelity_Voxel_Refinement_CVPR_2026_paper.html" }
 
 [[publication]]
