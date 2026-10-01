@@ -61,6 +61,7 @@ zh = "张家瑞"
 [[phdStudent]]
 en = "Yujie Sun"
 zh = "孙瑜杰"
+avatar = "/images/avatars/yujie-sun.webp"
 homepage = "https://unikeen.github.io"
 
 [[phdStudent]]
@@ -98,6 +99,7 @@ zh = "付慧"
 [[masterStudent]]
 en = "Zhuoqiang Cai"
 zh = "蔡卓强"
+avatar = "/images/avatars/zhuoqiang-cai.webp"
 homepage = "https://vhahahav.github.io"
 
 [[masterStudent]]
