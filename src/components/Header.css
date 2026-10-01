@@ -23,8 +23,12 @@
   line-height: 1.2;
 }
 
+/* The app icon brings its own colours, so unlike the old glyph mark it takes
+   no `color` from the theme — only a size. The file behind it is 192px, which
+   stays sharp on hi-dpi screens. */
 .header__mark {
-  color: var(--accent);
+  width: 30px;
+  height: 30px;
 }
 
 .header__brand-text {

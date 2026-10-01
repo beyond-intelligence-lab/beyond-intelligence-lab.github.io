@@ -30,19 +30,16 @@ export default function Header() {
     <header className="header">
       <div className="container header__inner">
         <Link className="header__brand" to="/" aria-label={t.site.name} onClick={closeMenu}>
-          <span className="header__mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="26" height="26">
-              <g stroke="currentColor" strokeWidth="1.6" opacity=".7" fill="none">
-                <path d="M10 11l6-3 6 3M10 11l-3 7 9 3 9-3-3-7M10 21l6 3 6-3" />
-              </g>
-              <g fill="currentColor">
-                <circle cx="16" cy="8" r="2.6" />
-                <circle cx="7" cy="18" r="2.6" />
-                <circle cx="16" cy="24" r="2.6" />
-                <circle cx="25" cy="18" r="2.6" />
-              </g>
-            </svg>
-          </span>
+          {/* The app icon ships in a light and a dark cut, so the mark follows
+              whichever theme is active. Decorative: the brand text sits beside
+              it and the link already carries an aria-label. */}
+          <img
+            className="header__mark"
+            src={theme === 'dark' ? '/app-icon-dark-192.png' : '/app-icon-light-192.png'}
+            alt=""
+            width={30}
+            height={30}
+          />
           <span className="header__brand-text">
             <strong>Beyond Intelligence</strong>
             <span>Lab</span>
