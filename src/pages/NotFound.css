@@ -1,0 +1,24 @@
+.notfound {
+  padding-block: clamp(4rem, 12vw, 9rem);
+}
+
+.notfound__inner {
+  max-width: 34rem;
+}
+
+.notfound__code {
+  font-family: var(--font-mono);
+  font-size: var(--step-2);
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+.notfound__title {
+  margin-top: 0.75rem;
+  font-size: var(--step-3);
+}
+
+.notfound__actions {
+  margin-top: 2rem;
+}

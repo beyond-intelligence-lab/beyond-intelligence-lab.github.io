@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Beyond Intelligence Lab</title>
+    <script>
+      // GitHub Pages has no SPA rewrite rule: unknown paths are served this file.
+      // Bounce to the app root with the original path preserved in ?p= so
+      // index.html can restore it and let the client router resolve the route.
+      (function () {
+        var location = window.location
+        location.replace(
+          location.origin + '/?p=' + encodeURIComponent(location.pathname + location.search + location.hash),
+        )
+      })()
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p>This site needs JavaScript. <a href="/">Go to the home page</a>.</p>
+    </noscript>
+  </body>
+</html>

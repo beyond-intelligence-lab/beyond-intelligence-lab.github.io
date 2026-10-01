@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+*.tsbuildinfo
+
+# Secrets and local config — never commit these
+# (Vite reads .env / .env.[mode]; `*.local` above only covers the .local suffix)
+.env
+.env.*
+!.env.example
+
+# AI coding tool folders — per-machine state and private config, never shared.
+# To commit something deliberate from one of these later, force it: git add -f <path>
+.claude/
+.codex/
+.cursor/
+.windsurf/
+.continue/
+.gemini/
+.roo/
+.cline/
+.aider*
+
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

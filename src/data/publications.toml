@@ -1,0 +1,543 @@
+# 论文数据 —— 改这个文件就够了，推送到 main 后由 GitHub Actions 自动发布。
+#
+# 1. 顶部用 [[topic]] 声明研究方向（中英双语，用来生成筛选按钮），论文的 topics 引用其 id
+# 2. 用 [[publication]] 添加论文，字段：id / title / authors / venues / year / topics，
+#    可选 image（图片放 public/publications/）、summary（一句话简介）、links
+# 3. venues 是标签列表，按展示顺序写：同一工作的会议版 + 期刊扩展版放在一条里，
+#    如 ["ICDM 2023", "IEEE TSC 2026"]；已正式发表的不再单列 arXiv 版本。
+#    颜色按类型自动分：会议=蓝，期刊=紫红（新期刊要加进 src/data/publications.ts 的
+#    JOURNAL_NAMES，否则按会议显示），arXiv=灰
+# 4. topics 是标签不是分类，一篇可以挂多个；左侧筛选是单选，一次看一个方向
+# 5. year 用会议版年份，用于排序和年份分组；列表按年份从新到旧，同一年内按
+#    期刊 → 会议 → arXiv 排列（自动推导，无需手写顺序；两个版本都有的条目按期刊归档）
+#
+# 字段拼错、方向 id 不存在、id 重复，都会在开发时报错、构建（CI）时直接失败。
+#
+# 数据来源与核对：DBLP 人物记录（注意 DBLP 把谢菲尔德同名的 Chaoyue Niu 混在了
+# pid 176/5779 里，已按合作者名单剔除）与 arXiv 逐条交叉验证，2026-10 核对。
+
+[[topic]]
+id = "data-market"
+en = "Data Markets & Privacy"
+zh = "数据市场与隐私"
+
+[[topic]]
+id = "federated"
+en = "Federated Learning"
+zh = "联邦学习"
+
+[[topic]]
+id = "device-cloud"
+en = "Device-Cloud Collaboration"
+zh = "端云协同"
+
+[[topic]]
+id = "on-device-llm"
+en = "On-Device LLMs"
+zh = "端侧大模型"
+
+[[topic]]
+id = "routing"
+en = "Model Routing"
+zh = "模型路由"
+
+[[topic]]
+id = "agent"
+en = "Agents"
+zh = "智能体"
+
+[[topic]]
+id = "vision-3d"
+en = "3D & Video Vision"
+zh = "三维与视频视觉"
+
+[[topic]]
+id = "mobile-systems"
+en = "Mobile Systems & Sensing"
+zh = "移动系统与感知"
+
+[[publication]]
+id = "trove-2026"
+title = "TROVE: Adaptive Agent Skill Orchestration via Trace-Grounded Route Validation and Editing"
+authors = ["Tianxing Wang", "Mingming Zhao", "Shuai Huang", "Huiyang Xu", "Chaoyue Niu", "Shengzhong Liu", "Fan Wu"]
+venues = ["arXiv"]
+year = 2026
+topics = ["agent"]
+links = { arxiv = "https://arxiv.org/abs/2609.05019" }
+
+[[publication]]
+id = "echo-2026"
+title = "ECHO: Dyadic 3D Facial Motion Generation with Asymmetric Deterministic Articulation and Stochastic Reaction"
+authors = ["Zhuoqiang Cai", "Yujie Sun", "Chaoyue Niu", "Hongyun Yu", "Zhiwen Chen", "Chengfei Lv", "Fan Wu"]
+venues = ["ACM MM 2026"]
+year = 2026
+topics = ["vision-3d"]
+links = { arxiv = "https://arxiv.org/abs/2609.05506" }
+
+[[publication]]
+id = "reflection-gui-agents-2026"
+title = "Reflection with Action-Induced Visual Differences for Desktop GUI Agents"
+authors = ["Yijie Ma", "Chaoyue Niu", "Fan Wu", "Guihai Chen"]
+venues = ["arXiv"]
+year = 2026
+topics = ["agent"]
+links = { arxiv = "https://arxiv.org/abs/2608.24015" }
+
+[[publication]]
+id = "offline-to-online-rl-2026"
+title = "Efficient Device-Cloud Collaborative Offline-to-Online Reinforcement Learning"
+authors = ["Honglan Huang", "Wei Shi", "Chaoyue Niu"]
+venues = ["AAMAS 2026"]
+year = 2026
+topics = ["device-cloud"]
+links = { paper = "https://dl.acm.org/doi/10.65109/STCC8399" }
+
+[[publication]]
+id = "seek-help-2026"
+title = "Learning to Seek Help: Dynamic Collaboration Between Small and Large Language Models"
+authors = ["Hang Zeng", "Xiangyu Liu", "Yong Hu", "Chaoyue Niu", "Jiarui Zhang", "Shaojie Tang", "Fan Wu", "Guihai Chen"]
+venues = ["arXiv"]
+year = 2026
+topics = ["on-device-llm", "routing"]
+links = { arxiv = "https://arxiv.org/abs/2604.17827" }
+
+[[publication]]
+id = "privacy-annotation-2026"
+title = "Automated Annotation of Privacy Information in User Interactions with Large Language Models"
+authors = ["Hang Zeng", "Xiangyu Liu", "Yong Hu", "Chaoyue Niu", "Fan Wu", "Shaojie Tang", "Guihai Chen"]
+venues = ["KDD 2026"]
+year = 2026
+topics = ["data-market"]
+links = { paper = "https://doi.org/10.1145/3770854.3785680" }
+
+[[publication]]
+id = "llm-routing-multiturn-2026"
+title = "Adaptive LLM Routing for Multi-Turn Conversations with Continuously Evolving User Queries"
+authors = ["Jiarui Zhang", "Xiangyu Liu", "Yong Hu", "Chaoyue Niu", "Hang Zeng", "Shaojie Tang", "Fan Wu", "Guihai Chen"]
+venues = ["NeurIPS 2026"]
+year = 2026
+topics = ["routing"]
+links = { arxiv = "https://arxiv.org/abs/2604.12385" }
+
+[[publication]]
+id = "video-grounding-2026"
+title = "Bridging Time and Space: Decoupled Spatio-Temporal Alignment for Video Grounding"
+authors = ["Xuezhen Tu", "Jingyu Wu", "Fangyu Kang", "Qingpeng Nong", "Kaijin Zhang", "Chaoyue Niu", "Fan Wu"]
+venues = ["arXiv"]
+year = 2026
+topics = ["vision-3d"]
+links = { arxiv = "https://arxiv.org/abs/2604.08014" }
+
+[[publication]]
+id = "fhavatar-2026"
+title = "FHAvatar: Fast and High-Fidelity Reconstruction of Face-and-Hair Composable 3D Head Avatar from Few Casual Captures"
+authors = ["Yujie Sun", "Zhuoqiang Cai", "Chaoyue Niu", "Jianchuan Chen", "Zhiwen Chen", "Chengfei Lv", "Fan Wu"]
+venues = ["CVPR 2026"]
+year = 2026
+topics = ["vision-3d"]
+links = { arxiv = "https://arxiv.org/abs/2603.23345" }
+
+[[publication]]
+id = "viaformer-2026"
+title = "VIAFormer: Voxel-Image Alignment Transformer for High-Fidelity Voxel Refinement"
+authors = ["Tiancheng Fang", "Bowen Pan", "Lingxi Chen", "Jiangjing Lyu", "Chengfei Lv", "Chaoyue Niu", "Fan Wu"]
+venues = ["CVPR 2026"]
+year = 2026
+topics = ["vision-3d"]
+links = { paper = "https://openaccess.thecvf.com/content/CVPR2026/html/Fang_VIAFormer_Voxel-Image_Alignment_Transformer_for_High-Fidelity_Voxel_Refinement_CVPR_2026_paper.html" }
+
+[[publication]]
+id = "livestreaming-2023"
+title = "Collaborative Service of On-Device Unimodal Model and Cloud-Based Multimodal Model for Mobile Livestreaming Content Understanding"
+authors = ["Chaoyue Niu", "Yufei Zhu", "Yutong Dai", "Yikai Yan", "Zhijie Cao", "Hao Jiang", "Chengfei Lv", "Shaojie Tang", "Fan Wu", "Guihai Chen"]
+venues = ["ICDM 2023", "IEEE TSC 2026"]
+year = 2023
+topics = ["device-cloud", "vision-3d"]
+links = { paper = "https://doi.org/10.1109/TSC.2026.3697495" }
+
+[[publication]]
+id = "dynamic-flow-2027"
+title = "Dynamic Flow, Static Graph: KV Cache Reuse for Efficient LLM Serving on Mobile NPUs"
+authors = ["Zhengxiang Huang", "Shengheng Chen", "Chaoyue Niu", "Yujie Sun", "Zhaode Wang", "Zeyu Zhao", "Chengfei Lv", "Fan Wu", "Guihai Chen"]
+venues = ["EuroSys 2027"]
+year = 2027
+topics = ["on-device-llm", "mobile-systems"]
+links = { arxiv = "https://arxiv.org/abs/2609.34727" }
+
+[[publication]]
+id = "hrm2avatar-2025"
+title = "HRM²Avatar: High-Fidelity Real-Time Mobile Avatars from Monocular Phone Scans"
+authors = ["Chao Shi", "Shenghao Jia", "Jinhui Liu", "Yong Zhang", "Liangchao Zhu", "Zhonglei Yang", "Jinze Ma", "Chaoyue Niu", "Chengfei Lv"]
+venues = ["SIGGRAPH Asia 2025"]
+year = 2025
+topics = ["vision-3d", "mobile-systems"]
+links = { paper = "https://doi.org/10.1145/3757377.3763894" }
+
+[[publication]]
+id = "querier-aware-llm-2025"
+title = "Querier-Aware LLM: Generating Personalized Responses to the Same Query from Different Queriers"
+authors = ["Hang Zeng", "Chaoyue Niu", "Fan Wu", "Chengfei Lv", "Guihai Chen"]
+venues = ["CIKM 2025"]
+year = 2025
+topics = ["device-cloud", "on-device-llm"]
+links = { paper = "https://doi.org/10.1145/3746252.3761389" }
+
+[[publication]]
+id = "federated-multi-task-2025"
+title = "Federated multi-task learning with cross-device heterogeneous task subsets"
+authors = ["Zewei Xin", "Qinya Li", "Chaoyue Niu", "Fan Wu", "Guihai Chen"]
+venues = ["JPDC 2025"]
+year = 2025
+topics = ["federated"]
+links = { paper = "https://doi.org/10.1016/j.jpdc.2025.105155" }
+
+[[publication]]
+id = "routing-text-to-image-2025"
+title = "Adaptive Routing of Text-to-Image Generation Requests between Large Cloud Model and Light-Weight Edge Model"
+authors = ["Zewei Xin", "Qinya Li", "Chaoyue Niu", "Fan Wu", "Guihai Chen"]
+venues = ["ICCV 2025"]
+year = 2025
+topics = ["routing"]
+links = { paper = "https://doi.org/10.1109/ICCV51701.2025.01811" }
+
+[[publication]]
+id = "core-mobile-agents-2025"
+title = "CORE: Reducing UI Exposure in Mobile Agents via Collaboration Between Cloud and Local LLMs"
+authors = ["Gucongcong Fan", "Chaoyue Niu", "Chengfei Lyu", "Fan Wu", "Guihai Chen"]
+venues = ["NeurIPS 2025"]
+year = 2025
+topics = ["agent", "on-device-llm"]
+links = { paper = "http://papers.nips.cc/paper_files/paper/2025/hash/636f1f78f7096caf126afaa27deb7b53-Abstract-Conference.html" }
+
+[[publication]]
+id = "drone-nerf-2025"
+title = "Real-Time Drone Flight Height Decision for 3D Building Reconstruction with NeRF"
+authors = ["Shenghao Jia", "Chaoyue Niu", "Fan Wu"]
+venues = ["MASS 2025"]
+year = 2025
+topics = ["vision-3d"]
+links = { paper = "https://doi.org/10.1109/MASS66014.2025.00033" }
+
+[[publication]]
+id = "personalized-lm-2025"
+title = "Personalized Language Model Learning on Text Data Without User Identifiers"
+authors = ["Yucheng Ding", "Yangwenjian Tan", "Xiangyu Liu", "Chaoyue Niu", "Fandong Meng", "Jie Zhou", "Ning Liu", "Fan Wu", "Guihai Chen"]
+venues = ["KDD 2025"]
+year = 2025
+topics = ["federated", "on-device-llm"]
+links = { paper = "https://doi.org/10.1145/3690624.3709211" }
+
+[[publication]]
+id = "cefsw-2025"
+title = "CEFSW'25: The 2nd Collaboration and Evolution of Foundation and Specialized Models Workshop"
+authors = ["Shengyu Zhang", "Fan Yao", "Yujie Lu", "Chaoyue Niu", "Hongxia Yang", "Fan Wu", "Fei Wu"]
+venues = ["ICMR 2025 Workshop"]
+year = 2025
+topics = ["device-cloud"]
+links = { paper = "https://doi.org/10.1145/3731715.3734510" }
+
+[[publication]]
+id = "mnn-aecs-2025"
+title = "MNN-AECS: Energy Optimization for LLM Decoding on Mobile Devices via Adaptive Core Selection"
+authors = ["Zhengxiang Huang", "Chaoyue Niu", "Zhaode Wang", "Jiarui Xue", "Hanming Zhang", "Yugang Wang", "Zewei Xin", "Xiaotang Jiang", "Chengfei Lv", "Fan Wu", "Guihai Chen"]
+venues = ["arXiv"]
+year = 2025
+topics = ["on-device-llm", "mobile-systems"]
+links = { arxiv = "https://arxiv.org/abs/2506.19884" }
+
+[[publication]]
+id = "ragrouter-2025"
+title = "RAGRouter: Learning to Route Queries to Multiple Retrieval-Augmented Language Models"
+authors = ["Jiarui Zhang", "Xiangyu Liu", "Yong Hu", "Chaoyue Niu", "Fan Wu", "Guihai Chen"]
+venues = ["NeurIPS 2025"]
+year = 2025
+topics = ["routing", "on-device-llm"]
+links = { paper = "http://papers.nips.cc/paper_files/paper/2025/hash/1759a83b007f0685c3fbc460fa1b6395-Abstract-Conference.html" }
+
+[[publication]]
+id = "collab-learning-survey-2025"
+title = "Collaborative Learning of On-Device Small Model and Cloud-Based Large Model: Advances and Future Directions"
+authors = ["Chaoyue Niu", "Yucheng Ding", "Junhui Lu", "Zhengxiang Huang", "Hang Zeng", "Yutong Dai", "Xuezhen Tu", "Chengfei Lv", "Fan Wu", "Guihai Chen"]
+venues = ["arXiv"]
+year = 2025
+topics = ["device-cloud", "on-device-llm"]
+links = { arxiv = "https://arxiv.org/abs/2504.15300" }
+
+[[publication]]
+id = "arsys-2025"
+title = "ARSys: An Efficient and Cross-Platform Development, Deployment, and Runtime System for Mobile Augmented Reality"
+authors = ["Chengfei Lv", "Chaoyue Niu", "Yu Cai", "Xiaotang Jiang", "Fan Wu", "Guihai Chen"]
+venues = ["IEEE TMC 2025"]
+year = 2025
+topics = ["mobile-systems"]
+links = { paper = "https://doi.org/10.1109/TMC.2025.3586797" }
+
+[[publication]]
+id = "block-cyclic-2024"
+title = "Distributed Optimization over Block-Cyclic Data"
+authors = ["Yucheng Ding", "Chaoyue Niu", "Yikai Yan", "Zhenzhe Zheng", "Fan Wu", "Guihai Chen", "Shaojie Tang", "Rongfei Jia"]
+venues = ["MMAsia 2024 Workshop"]
+year = 2024
+topics = ["federated"]
+links = { paper = "https://doi.org/10.1145/3700410.3702128" }
+
+[[publication]]
+id = "picking-models-2024"
+title = "Picking Models for Heterogeneous Clients: A Server-Client Feature Contrastive Learning Design"
+authors = ["Jialiang Wang", "Chaoyue Niu", "Fan Wu"]
+venues = ["HPCC 2024"]
+year = 2024
+topics = ["federated"]
+links = { paper = "https://doi.org/10.1109/HPCC64274.2024.00096" }
+
+[[publication]]
+id = "mobile-3d-video-2024"
+title = "An End-to-End, Low-Cost, and High-Fidelity 3D Video Pipeline for Mobile Devices"
+authors = ["Tiancheng Fang", "Chaoyue Niu", "Yujie Sun", "Chengfei Lv", "Xiaotang Jiang", "Ben Xue", "Fan Wu", "Guihai Chen"]
+venues = ["MobiCom 2024"]
+year = 2024
+topics = ["vision-3d", "mobile-systems"]
+links = { paper = "https://doi.org/10.1145/3636534.3690685" }
+
+[[publication]]
+id = "on-device-llm-history-2024"
+title = "Enhancing On-Device LLM Inference with Historical Cloud-Based LLM Interactions"
+authors = ["Yucheng Ding", "Chaoyue Niu", "Fan Wu", "Shaojie Tang", "Chengfei Lyu", "Guihai Chen"]
+venues = ["KDD 2024"]
+year = 2024
+topics = ["on-device-llm", "device-cloud"]
+links = { paper = "https://doi.org/10.1145/3637528.3671679" }
+
+[[publication]]
+id = "mpod123-2024"
+title = "MPOD123: One Image to 3D Content Generation Using Mask-Enhanced Progressive Outline-to-Detail Optimization"
+authors = ["Jimin Xu", "Tianbao Wang", "Tao Jin", "Shengyu Zhang", "Dongjie Fu", "Zhe Wang", "Jiangjing Lyu", "Chengfei Lv", "Chaoyue Niu", "Zhou Yu", "Zhou Zhao", "Fei Wu"]
+venues = ["CVPR 2024"]
+year = 2024
+topics = ["vision-3d"]
+links = { paper = "https://doi.org/10.1109/CVPR52733.2024.01016" }
+
+[[publication]]
+id = "gas-sensing-2024"
+title = "Waving Hand as Infrared Source for Ubiquitous Gas Sensing"
+authors = ["Zimo Liao", "Meng Jin", "Shun An", "Chaoyue Niu", "Fan Wu", "Tao Deng", "Guihai Chen"]
+venues = ["IMWUT 2024"]
+year = 2024
+topics = ["mobile-systems"]
+links = { paper = "https://doi.org/10.1145/3659605" }
+
+[[publication]]
+id = "bikt-2024"
+title = "BiKT: Enabling Bidirectional Knowledge Transfer Between Pretrained Models and Sequential Downstream Tasks"
+authors = ["Hang Zeng", "Chaoyue Niu", "Fan Wu", "Shaojie Tang", "Leihao Pei", "Chengfei Lv", "Guihai Chen"]
+venues = ["EMNLP Findings 2024"]
+year = 2024
+topics = ["device-cloud"]
+links = { paper = "https://doi.org/10.18653/v1/2024.findings-emnlp.179" }
+
+[[publication]]
+id = "cloud-attention-2024"
+title = "Adapting the Attention of Cloud-Based Recognition Model to Client-Side Images without Local Re-Training"
+authors = ["Yangwenjian Tan", "Yikai Yan", "Chaoyue Niu"]
+venues = ["ACML 2024"]
+year = 2024
+topics = ["device-cloud"]
+links = { paper = "https://proceedings.mlr.press/v260/tan25a.html" }
+
+[[publication]]
+id = "clustered-fl-2024"
+title = "Active Client Selection for Clustered Federated Learning"
+authors = ["Honglan Huang", "Wei Shi", "Yanghe Feng", "Chaoyue Niu", "Guangquan Cheng", "Jincai Huang", "Zhong Liu"]
+venues = ["IEEE TNNLS 2024"]
+year = 2024
+topics = ["federated"]
+links = { paper = "https://doi.org/10.1109/TNNLS.2023.3294295" }
+
+[[publication]]
+id = "intermittent-clients-2024"
+title = "Federated Optimization Under Intermittent Client Availability"
+authors = ["Yikai Yan", "Chaoyue Niu", "Yucheng Ding", "Zhenzhe Zheng", "Shaojie Tang", "Qinya Li", "Fan Wu", "Chengfei Lyu", "Yanghe Feng", "Guihai Chen"]
+venues = ["INFORMS JoC 2024"]
+year = 2024
+topics = ["federated"]
+links = { paper = "https://doi.org/10.1287/ijoc.2022.0057" }
+
+[[publication]]
+id = "kvsagg-2023"
+title = "KVSAgg: Secure Aggregation of Distributed Key-Value Sets"
+authors = ["Yuhan Wu", "Siyuan Dong", "Yi Zhou", "Yikai Zhao", "Fangcheng Fu", "Tong Yang", "Chaoyue Niu", "Fan Wu", "Bin Cui"]
+venues = ["ICDE 2023"]
+year = 2023
+topics = ["federated", "data-market"]
+links = { paper = "https://doi.org/10.1109/ICDE55515.2023.00139" }
+
+[[publication]]
+id = "dc-ccl-2023"
+title = "DC-CCL: Device-Cloud Collaborative Controlled Learning for Large Vision Models"
+authors = ["Yucheng Ding", "Chaoyue Niu", "Fan Wu", "Shaojie Tang", "Chengfei Lyu", "Guihai Chen"]
+venues = ["arXiv"]
+year = 2023
+topics = ["device-cloud"]
+links = { arxiv = "https://arxiv.org/abs/2303.10361" }
+
+[[publication]]
+id = "label-correction-2022"
+title = "On-Device Model Fine-Tuning with Label Correction in Recommender Systems"
+authors = ["Yucheng Ding", "Chaoyue Niu", "Fan Wu", "Shaojie Tang", "Chengfei Lyu", "Guihai Chen"]
+venues = ["arXiv"]
+year = 2022
+topics = ["device-cloud"]
+links = { arxiv = "https://arxiv.org/abs/2211.01163" }
+
+[[publication]]
+id = "model-personalization-2022"
+title = "On-Device Learning for Model Personalization with Large-Scale Cloud-Coordinated Domain Adaption"
+authors = ["Yikai Yan", "Chaoyue Niu", "Renjie Gu", "Fan Wu", "Shaojie Tang", "Lifeng Hua", "Chengfei Lyu", "Guihai Chen"]
+venues = ["KDD 2022"]
+year = 2022
+topics = ["device-cloud"]
+links = { paper = "https://doi.org/10.1145/3534678.3539263" }
+
+[[publication]]
+id = "walle-2022"
+title = "Walle: An End-to-End, General-Purpose, and Large-Scale Production System for Device-Cloud Collaborative Machine Learning"
+authors = ["Chengfei Lv", "Chaoyue Niu", "Renjie Gu", "Xiaotang Jiang", "Zhaode Wang", "Bin Liu", "Ziqi Wu", "Qiulin Yao", "Congyu Huang", "Panos Huang", "Tao Huang", "Hui Shu", "Jinde Song", "Bin Zou", "Peng Lan", "Guohuan Xu", "Fei Wu", "Shaojie Tang", "Fan Wu", "Guihai Chen"]
+venues = ["OSDI 2022"]
+year = 2022
+topics = ["device-cloud"]
+links = { paper = "https://www.usenix.org/conference/osdi22/presentation/lv" }
+
+[[publication]]
+id = "verifiable-ml-2022"
+title = "Toward Verifiable and Privacy Preserving Machine Learning Prediction"
+authors = ["Chaoyue Niu", "Fan Wu", "Shaojie Tang", "Shuai Ma", "Guihai Chen"]
+venues = ["IEEE TDSC 2022"]
+year = 2022
+topics = ["data-market"]
+links = { paper = "https://doi.org/10.1109/TDSC.2020.3035591" }
+
+[[publication]]
+id = "pricing-gan-2022"
+title = "Pricing GAN-based data generators under Rényi differential privacy"
+authors = ["Xikun Jiang", "Chaoyue Niu", "Chenhao Ying", "Fan Wu", "Yuan Luo"]
+venues = ["Information Sciences 2022"]
+year = 2022
+topics = ["data-market"]
+links = { paper = "https://doi.org/10.1016/j.ins.2022.04.030" }
+
+[[publication]]
+id = "cloud-augmentation-2022"
+title = "On-Device Learning with Cloud-Coordinated Data Augmentation for Extreme Model Personalization in Recommender Systems"
+authors = ["Renjie Gu", "Chaoyue Niu", "Yikai Yan", "Fan Wu", "Shaojie Tang", "Rongfeng Jia", "Chengfei Lyu", "Guihai Chen"]
+venues = ["arXiv"]
+year = 2022
+topics = ["device-cloud"]
+links = { arxiv = "https://arxiv.org/abs/2201.10382" }
+
+[[publication]]
+id = "federated-submodel-2022"
+title = "Federated Submodel Optimization for Hot and Cold Data Features"
+authors = ["Yucheng Ding", "Chaoyue Niu", "Fan Wu", "Shaojie Tang", "Chengfei Lyu", "Yanghe Feng", "Guihai Chen"]
+venues = ["NeurIPS 2022"]
+year = 2022
+topics = ["federated"]
+links = { paper = "http://papers.nips.cc/paper_files/paper/2022/hash/002262941c9edfd472a79298b2ac5e17-Abstract-Conference.html" }
+
+[[publication]]
+id = "client-based-ml-survey-2022"
+title = "From Server-Based to Client-Based Machine Learning: A Comprehensive Survey"
+authors = ["Renjie Gu", "Chaoyue Niu", "Fan Wu", "Guihai Chen", "Chun Hu", "Chengfei Lyu", "Zhihua Wu"]
+venues = ["ACM CSUR 2022"]
+year = 2022
+topics = ["device-cloud", "federated"]
+links = { paper = "https://doi.org/10.1145/3424660" }
+
+[[publication]]
+id = "individual-clients-2021"
+title = "Toward Understanding the Influence of Individual Clients in Federated Learning"
+authors = ["Yihao Xue", "Chaoyue Niu", "Zhenzhe Zheng", "Shaojie Tang", "Chengfei Lyu", "Fan Wu", "Guihai Chen"]
+venues = ["AAAI 2021"]
+year = 2021
+topics = ["federated"]
+links = { paper = "https://doi.org/10.1609/aaai.v35i12.17263" }
+
+[[publication]]
+id = "erato-2021"
+title = "ERATO: Trading Noisy Aggregate Statistics over Private Correlated Data"
+authors = ["Chaoyue Niu", "Zhenzhe Zheng", "Fan Wu", "Shaojie Tang", "Xiaofeng Gao", "Guihai Chen"]
+venues = ["IEEE TKDE 2021"]
+year = 2021
+topics = ["data-market"]
+links = { paper = "https://doi.org/10.1109/TKDE.2019.2934100" }
+
+[[publication]]
+id = "billion-scale-fl-2020"
+title = "Billion-scale federated learning on mobile clients: a submodel design with tunable privacy"
+authors = ["Chaoyue Niu", "Fan Wu", "Shaojie Tang", "Lifeng Hua", "Rongfei Jia", "Chengfei Lv", "Zhihua Wu", "Guihai Chen"]
+venues = ["MobiCom 2020"]
+year = 2020
+topics = ["federated"]
+links = { paper = "https://doi.org/10.1145/3372224.3419188" }
+
+[[publication]]
+id = "online-pricing-2020"
+title = "Online Pricing With Reserve Price Constraint for Personal Data Markets"
+authors = ["Chaoyue Niu", "Zhenzhe Zheng", "Fan Wu", "Shaojie Tang", "Guihai Chen"]
+venues = ["ICDE 2020", "IEEE TKDE 2022"]
+year = 2020
+topics = ["data-market"]
+links = { paper = "https://doi.org/10.1109/TKDE.2020.3000262" }
+
+[[publication]]
+id = "small-sensors-2019"
+title = "Making Big Money from Small Sensors: Trading Time-Series Data under Pufferfish Privacy"
+authors = ["Chaoyue Niu", "Zhenzhe Zheng", "Shaojie Tang", "Xiaofeng Gao", "Fan Wu"]
+venues = ["INFOCOM 2019"]
+year = 2019
+topics = ["data-market"]
+links = { paper = "https://doi.org/10.1109/INFOCOM.2019.8737579" }
+
+[[publication]]
+id = "data-truthfulness-2019"
+title = "Achieving Data Truthfulness and Privacy Preservation in Data Markets"
+authors = ["Chaoyue Niu", "Zhenzhe Zheng", "Fan Wu", "Xiaofeng Gao", "Guihai Chen"]
+venues = ["IEEE TKDE 2019"]
+year = 2019
+topics = ["data-market"]
+links = { paper = "https://doi.org/10.1109/TKDE.2018.2822727" }
+
+[[publication]]
+id = "unlocking-value-2018"
+title = "Unlocking the Value of Privacy: Trading Aggregate Statistics over Private Correlated Data"
+authors = ["Chaoyue Niu", "Zhenzhe Zheng", "Fan Wu", "Shaojie Tang", "Xiaofeng Gao", "Guihai Chen"]
+venues = ["KDD 2018"]
+year = 2018
+topics = ["data-market"]
+links = { paper = "https://doi.org/10.1145/3219819.3220013" }
+
+[[publication]]
+id = "era-ad-exchange-2017"
+title = "ERA: Towards privacy preservation and verifiability for online ad exchanges"
+authors = ["Chaoyue Niu", "Minping Zhou", "Zhenzhe Zheng", "Fan Wu", "Guihai Chen"]
+venues = ["JNCA 2017"]
+year = 2017
+topics = ["data-market"]
+links = { paper = "https://doi.org/10.1016/j.jnca.2017.08.012" }
+
+[[publication]]
+id = "good-faith-2017"
+title = "Trading Data in Good Faith: Integrating Truthfulness and Privacy Preservation in Data Markets"
+authors = ["Chaoyue Niu", "Zhenzhe Zheng", "Fan Wu", "Xiaofeng Gao", "Guihai Chen"]
+venues = ["ICDE 2017"]
+year = 2017
+topics = ["data-market"]
+links = { paper = "https://doi.org/10.1109/ICDE.2017.80" }
+
+[[publication]]
+id = "online-auction-2015"
+title = "An Efficient, Privacy-Preserving, and Verifiable Online Auction Mechanism for Ad Exchanges"
+authors = ["Minping Zhou", "Chaoyue Niu", "Zhenzhe Zheng", "Fan Wu", "Guihai Chen"]
+venues = ["GLOBECOM 2015"]
+year = 2015
+topics = ["data-market"]
+links = { paper = "https://doi.org/10.1109/GLOCOM.2014.7417743" }

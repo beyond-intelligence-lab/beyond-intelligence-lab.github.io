@@ -1,0 +1,11 @@
+.footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--bg-subtle);
+  padding-block: 1.5rem;
+}
+
+.footer__copyright {
+  color: var(--text-muted);
+  font-size: var(--step--1);
+  text-align: center;
+}

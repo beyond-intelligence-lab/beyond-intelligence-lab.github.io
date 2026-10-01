@@ -1,0 +1,105 @@
+.publication-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* From the desktop breakpoint up this becomes the left sidebar column rather
+   than a row above the list — keep in sync with `.publications__layout` in
+   Publications.css. */
+@media (min-width: 56.0625rem) {
+  .publication-filters {
+    position: sticky;
+    /* clears the sticky site header (4rem + its border) */
+    top: 5.25rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+  }
+
+  .publication-filters__chip {
+    justify-content: space-between;
+    /* A label long enough to wrap keeps the count on its first line instead of
+       floating at the vertical middle of the two. */
+    align-items: baseline;
+  }
+}
+
+.publication-filters__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--border);
+  /* One radius for every chip, whatever the line count. A single-line box is
+     shorter than the radius pair, so the browser scales it down to a pill; a
+     chip that wraps to two lines keeps the literal value and reads as a rounded
+     rectangle instead of growing into a capsule. */
+  border-radius: 1.25rem;
+  background-color: var(--surface);
+  color: var(--text-muted);
+  font-size: var(--step--1);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.publication-filters__chip:hover {
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+/* Styled off `aria-pressed` rather than a class, so the visual state cannot
+   drift from the state assistive tech announces. */
+.publication-filters__chip[aria-pressed='true'] {
+  border-color: var(--accent);
+  background-color: var(--accent-soft);
+  color: var(--accent);
+}
+
+.publication-filters__count {
+  color: var(--text-muted);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+.publication-filters__chip[aria-pressed='true'] .publication-filters__count {
+  color: inherit;
+  opacity: 0.75;
+}
+
+/* "All" is the way to clear every tag, so it carries weight in both states:
+   off, a grey fill one step below the plain chips; on, the heaviest fill in the
+   group. (Declared after the generic pressed rule on purpose: equal
+   specificity, later wins.) */
+.publication-filters__chip--all {
+  border-color: var(--border-strong);
+  background-color: var(--border);
+  color: var(--text);
+}
+
+.publication-filters__chip--all:hover:not([aria-pressed='true']) {
+  background-color: var(--border-strong);
+}
+
+.publication-filters__chip--all[aria-pressed='true'] {
+  border-color: var(--solid);
+  background-color: var(--solid);
+  color: var(--solid-contrast);
+}
+
+.publication-filters__chip--all[aria-pressed='true']:hover {
+  filter: brightness(1.12);
+}
+
+/* The dimming above buys hierarchy on the tinted chips, but on a solid fill it
+   only costs legibility — the count sits on the same background as the label,
+   so it carries the same colour at full strength.
+   (Same specificity as the pressed rule, declared later, so it wins.) */
+.publication-filters__chip--all[aria-pressed='true'] .publication-filters__count {
+  color: inherit;
+  opacity: 1;
+}

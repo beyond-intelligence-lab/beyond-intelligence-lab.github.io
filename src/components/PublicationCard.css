@@ -1,0 +1,133 @@
+.publication {
+  display: grid;
+  grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  padding: clamp(1rem, 2vw, 1.25rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.publication:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow);
+}
+
+.publication__media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-subtle);
+}
+
+.publication__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.publication__media--empty {
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+}
+
+/* Placeholder mark reads as a thumbnail, not a stray glyph. The icon's own
+   stroke scales with it, so thin it back down. */
+.publication__media--empty svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke-width: 1.4;
+}
+
+.publication__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
+.publication__venues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.publication__venue {
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: var(--step--1);
+  font-weight: 600;
+}
+
+/* Blue conference / magenta journal / grey preprint. */
+.publication__venue--conference {
+  background-color: var(--accent-soft);
+  color: var(--accent);
+}
+
+.publication__venue--journal {
+  background-color: var(--tag-journal-soft);
+  color: var(--tag-journal);
+}
+
+.publication__venue--preprint {
+  background-color: var(--bg-subtle);
+  color: var(--text-muted);
+}
+
+.publication__title {
+  font-size: var(--step-1);
+}
+
+.publication__authors,
+.publication__summary {
+  color: var(--text-muted);
+  font-size: var(--step--1);
+}
+
+.publication__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.15rem;
+}
+
+/* Reuses the global .button look, sized down: tighter type, tighter corners
+   (a pill at this height reads as a lozenge), and a smaller icon to match.
+   Qualified with `.button` so it outranks the global rule regardless of the
+   order the two stylesheets end up in. */
+.button.publication__link {
+  gap: 0.35rem;
+  padding: 0.28rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+}
+
+.publication__link svg {
+  width: 14px;
+  height: 14px;
+}
+
+.publication__summary {
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 44rem) {
+  .publication {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stacked, a full-width 4:3 box is mostly empty air. `width` is explicit so
+     the cap shortens the box instead of the aspect ratio narrowing it, and the
+     cover crop takes care of real screenshots. */
+  .publication__media {
+    width: 100%;
+    max-height: 11rem;
+  }
+}

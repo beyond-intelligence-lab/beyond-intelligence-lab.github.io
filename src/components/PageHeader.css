@@ -1,0 +1,17 @@
+.page-header {
+  padding-block: clamp(2.75rem, 6vw, 4.5rem) clamp(1.5rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-subtle);
+}
+
+.page-header__title {
+  font-size: var(--step-3);
+}
+
+.page-header__lead {
+  max-width: 44rem;
+  margin-top: 1rem;
+  color: var(--text-muted);
+  font-size: var(--step-1);
+  line-height: 1.6;
+}

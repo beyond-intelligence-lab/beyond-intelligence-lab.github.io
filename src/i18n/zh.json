@@ -1,0 +1,43 @@
+{
+  "site": {
+    "name": "Beyond Intelligence Lab"
+  },
+  "nav": {
+    "home": "首页",
+    "publications": "论文发表",
+    "group": "团队"
+  },
+  "publications": {
+    "filterAll": "全部",
+    "filterLabel": "按研究方向筛选论文",
+    "listLabel": "论文列表",
+    "shown": "显示 {count} / {total} 篇论文",
+    "empty": "论文列表即将更新，敬请期待。",
+    "newTab": "在新标签页打开",
+    "links": {
+      "paper": "论文",
+      "code": "代码",
+      "project": "项目",
+      "slides": "幻灯片",
+      "arxiv": "arXiv"
+    }
+  },
+  "a11y": {
+    "skipToContent": "跳到主要内容",
+    "openMenu": "打开导航菜单",
+    "closeMenu": "关闭导航菜单",
+    "toggleTheme": "在浅色与深色主题之间切换",
+    "toggleLanguage": "切换语言"
+  },
+  "theme": {
+    "toLight": "切换到浅色主题",
+    "toDark": "切换到深色主题"
+  },
+  "footer": {
+    "copyright": "© {year} Beyond Intelligence Lab"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "页面不存在"
+  }
+}
