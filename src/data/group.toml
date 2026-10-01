@@ -80,6 +80,7 @@ zh = "马逸杰"
 [[phdStudent]]
 en = "Zeyu Zhao"
 zh = "赵泽宇"
+avatar = "/images/avatars/zeyu-zhao.webp"
 
 [[masterStudent]]
 en = "Yutong Dai"
@@ -115,6 +116,7 @@ avatar = "/images/avatars/shengheng-chen.jpeg"
 [[masterStudent]]
 en = "Zhihao Ji"
 zh = "姬智昊"
+avatar = "/images/avatars/zhihao-ji.webp"
 
 [[masterStudent]]
 en = "Jiarui Xue"
