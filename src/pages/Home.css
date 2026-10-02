@@ -14,9 +14,149 @@
   pointer-events: none;
 }
 
+/* --- Drifting glow ---------------------------------------------------------
+   Every knob below comes from a `--glow-*` custom property that Home.tsx rolls
+   once per visit, so place, size and rhythm differ every time. Only transform
+   and opacity animate: the layer is rasterised once (blur included) and then
+   just moves.
+--------------------------------------------------------------------------- */
+
+.banner__glow {
+  position: absolute;
+  inset: 0;
+  /* The glow belongs to the slogan's corner rather than the whole banner: this
+     column is the box its centre is rolled in. It may still spill past the
+     column — the banner is what clips it. */
+  width: min(100%, 46rem);
+  pointer-events: none;
+}
+
+.banner__glow-blob {
+  /* Wide and shallow, so a large glow still fits the banner's letterbox
+     shape, and it eases back down on narrow screens. */
+  --blob-w: min(var(--glow-w), 92vw);
+  --blob-h: clamp(6rem, calc(var(--blob-w) * 0.34), 18rem);
+
+  position: absolute;
+  /* --glow-x/--glow-y are the centre; the halves shift the box onto it. */
+  left: calc(var(--glow-x) - var(--blob-w) / 2);
+  top: calc(var(--glow-y) - var(--blob-h) / 2);
+  width: var(--blob-w);
+  height: var(--blob-h);
+  /* Uneven on purpose — rotating an even shape would look static. */
+  border-radius: var(--glow-radius, 50%);
+  /* Two overlapping hot spots rather than one centre: when the shape turns,
+     their positions relative to the outline shift, and the light inside the
+     glow appears to flow. */
+  background-image:
+    radial-gradient(
+      ellipse 62% 72% at 38% 44%,
+      var(--accent) 0%,
+      color-mix(in srgb, var(--accent) 45%, transparent) 45%,
+      transparent 78%
+    ),
+    radial-gradient(
+      ellipse 58% 66% at 66% 60%,
+      color-mix(in srgb, var(--accent) 42%, transparent) 0%,
+      color-mix(in srgb, var(--accent) 16%, transparent) 50%,
+      transparent 82%
+    );
+  opacity: var(--glow-opacity);
+  filter: blur(clamp(18px, 2vw, 40px));
+  animation: glow-flow var(--glow-duration) ease-in-out var(--glow-delay) infinite alternate;
+}
+
+/* Transform and opacity only, so the blurred layer is rasterised once and the
+   browser just moves it. */
+@keyframes glow-flow {
+  from {
+    transform: translate3d(calc(var(--glow-drift-x) * -1), var(--glow-drift-y), 0)
+      rotate(calc(var(--glow-spin) * -1)) scale(calc(var(--glow-scale) * 0.9));
+    opacity: calc(var(--glow-opacity) * 0.4);
+  }
+
+  to {
+    transform: translate3d(var(--glow-drift-x), calc(var(--glow-drift-y) * -1), 0)
+      rotate(var(--glow-spin)) scale(var(--glow-scale));
+    opacity: var(--glow-opacity);
+  }
+}
+
 .banner .container {
   position: relative;
   padding-block: clamp(3.5rem, 9vw, 7rem);
+}
+
+/* Reserved for the lab's introduction. No heading, and no bottom padding — the
+   next section's top padding sets the gap. */
+.home-intro {
+  padding-block: clamp(3rem, 7vw, 5.5rem) 0;
+}
+
+.home-intro__text {
+  max-width: 60rem;
+  font-size: var(--step-1);
+  line-height: 1.7;
+}
+
+/* Same idiom again: the timeline ends this block, so the next section's top
+   padding alone sets the gap. With both sections padded the two would stack
+   into a single oversized gap.
+   Deliberately not combined with `.section` — page stylesheets are bundled
+   before `global.css`, so a `.section` override here would lose the tie on
+   source order. Standalone class, no `.section`, no tie to lose. */
+.home-news {
+  padding-block: clamp(3rem, 7vw, 5.5rem) 0;
+}
+
+/* --- Explore cards -------------------------------------------------------- */
+
+.explore {
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+}
+
+.explore__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: clamp(1.35rem, 2.5vw, 1.85rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.explore__card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow);
+}
+
+.explore__title {
+  font-size: var(--step-2);
+}
+
+.explore__blurb {
+  /* Pushes the button to the bottom, so cards of unequal text line up. */
+  flex: 1;
+  color: var(--text-muted);
+}
+
+.explore__action {
+  margin-top: 0.35rem;
+}
+
+.explore__action svg {
+  transition: transform 0.15s ease;
+}
+
+.explore__action:hover svg {
+  transform: translateX(3px);
 }
 
 .banner__slogan {

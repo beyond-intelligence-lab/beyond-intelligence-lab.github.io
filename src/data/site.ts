@@ -9,5 +9,6 @@ export type NavItem = {
 export const NAV_ITEMS: readonly NavItem[] = [
   { to: '/home', labelKey: 'home' },
   { to: '/publications', labelKey: 'publications' },
+  { to: '/projects', labelKey: 'projects' },
   { to: '/group', labelKey: 'group' },
 ]

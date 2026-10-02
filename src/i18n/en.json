@@ -5,18 +5,32 @@
   "nav": {
     "home": "Home",
     "publications": "Publications",
-    "group": "Group"
+    "group": "Group",
+    "projects": "Projects"
   },
   "group": {
     "teacher": "Teacher",
     "phdStudent": "PhD Students",
     "masterStudent": "Master Students",
-    "alumni": "Alumni"
+    "alumni": "Alumni",
+    "join": {
+      "title": "Welcome to Join Us",
+      "body": "We keep seeking for strong and self-motivated PhD students, master students, and undergraduate interns."
+    }
   },
   "home": {
     "slogan": "Beyond Intelligence",
     "lead": "TBD",
-    "newsTitle": "Recent news"
+    "intro": "TBD (Introduction)",
+    "newsTitle": "Recent news",
+    "explore": "Explore",
+    "cards": {
+      "research": { "title": "Research", "blurb": "TBD" },
+      "projects": { "title": "Projects", "blurb": "TBD" }
+    }
+  },
+  "projects": {
+    "placeholder": "TBD"
   },
   "publications": {
     "filterAll": "All",

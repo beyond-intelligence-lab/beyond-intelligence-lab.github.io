@@ -5,18 +5,32 @@
   "nav": {
     "home": "首页",
     "publications": "论文发表",
-    "group": "团队"
+    "group": "团队",
+    "projects": "项目"
   },
   "group": {
     "teacher": "教师",
     "phdStudent": "博士生",
     "masterStudent": "硕士生",
-    "alumni": "已毕业学生"
+    "alumni": "已毕业学生",
+    "join": {
+      "title": "欢迎加入我们",
+      "body": "课题组长期招收优秀的博士生、硕士生与本科生实习生，欢迎自驱力强、乐于钻研的同学加入。"
+    }
   },
   "home": {
     "slogan": "Beyond Intelligence",
     "lead": "TBD",
-    "newsTitle": "最新动态"
+    "intro": "TBD（实验室简介）",
+    "newsTitle": "最新动态",
+    "explore": "查看",
+    "cards": {
+      "research": { "title": "研究方向", "blurb": "TBD" },
+      "projects": { "title": "项目", "blurb": "TBD" }
+    }
+  },
+  "projects": {
+    "placeholder": "TBD"
   },
   "publications": {
     "filterAll": "全部",

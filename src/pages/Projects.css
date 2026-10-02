@@ -1,0 +1,6 @@
+.projects__placeholder {
+  max-width: 46rem;
+  color: var(--text-muted);
+  font-size: var(--step-1);
+  line-height: 1.6;
+}

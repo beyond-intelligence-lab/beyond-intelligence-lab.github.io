@@ -3,6 +3,44 @@
   gap: clamp(2.5rem, 5vw, 3.5rem);
 }
 
+/* The callout opens the page, so the section does not need its usual full top
+   padding above it. Qualified with `.section` to outrank the global rule. */
+.section.group-page {
+  padding-block-start: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* --- Join callout ----------------------------------------------------------
+   Info-level alert: tinted accent rather than a warning colour, because it is
+   an invitation, not a problem.
+--------------------------------------------------------------------------- */
+
+.join-callout {
+  margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
+  display: flex;
+  gap: 0.9rem;
+  padding: clamp(1rem, 2vw, 1.35rem) clamp(1.1rem, 2.2vw, 1.5rem);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  border-radius: var(--radius);
+  background-color: var(--accent-soft);
+}
+
+.join-callout__icon {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  color: var(--accent);
+}
+
+.join-callout__title {
+  font-weight: 600;
+}
+
+.join-callout__body {
+  margin-top: 0.2rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
 .group__title {
   display: flex;
   align-items: center;
