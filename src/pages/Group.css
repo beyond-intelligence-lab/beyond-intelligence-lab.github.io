@@ -18,7 +18,7 @@
   margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
   display: flex;
   gap: 0.9rem;
-  padding: clamp(1rem, 2vw, 1.35rem) clamp(1.1rem, 2.2vw, 1.5rem);
+  padding: 0.8rem clamp(1.1rem, 2.2vw, 1.5rem);
   border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
   border-radius: var(--radius);
   background-color: var(--accent-soft);
@@ -34,10 +34,14 @@
   font-weight: 600;
 }
 
+.join-callout__language + .join-callout__language {
+  margin-top: 0.6rem;
+}
+
 .join-callout__body {
   margin-top: 0.2rem;
-  color: var(--text-muted);
-  line-height: 1.6;
+  color: var(--text);
+  line-height: 1.5;
   text-wrap: pretty;
 }
 

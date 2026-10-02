@@ -30,11 +30,13 @@ export type Member = {
   avatar?: string
   /** Personal page — http(s) or a site path. The name becomes a link. */
   homepage?: string
+  /** First employer after graduation, shown below the alumnus's name. */
+  firstPosition?: { en: string; zh: string }
 }
 
 export type GroupData = Record<GroupSectionId, readonly Member[]>
 
-const MEMBER_KEYS = ['en', 'zh', 'avatar', 'homepage']
+const MEMBER_KEYS = ['en', 'zh', 'avatar', 'homepage', 'first_position']
 
 export function parseGroupData(raw: unknown, label = 'group.toml'): GroupData {
   const problems: string[] = []
@@ -100,7 +102,26 @@ export function parseGroupData(raw: unknown, label = 'group.toml'): GroupData {
           }
         }
 
-        if (en && zh) members.push({ en, zh, avatar, homepage })
+        let firstPosition: Member['firstPosition']
+        if (value.first_position !== undefined) {
+          const position = value.first_position
+          if (!isRecord(position)) {
+            fail(`${where}.first_position`, '必须是包含 en 和 zh 的表')
+          } else {
+            for (const key of Object.keys(position)) {
+              if (key !== 'en' && key !== 'zh') {
+                fail(`${where}.first_position`, `未知字段 "${key}"（允许：en, zh）`)
+              }
+            }
+            const positionEn = readString(position.en)
+            const positionZh = readString(position.zh)
+            if (!positionEn) fail(`${where}.first_position`, '缺少非空的 "en"（英文单位名）')
+            if (!positionZh) fail(`${where}.first_position`, '缺少非空的 "zh"（中文单位名）')
+            if (positionEn && positionZh) firstPosition = { en: positionEn, zh: positionZh }
+          }
+        }
+
+        if (en && zh) members.push({ en, zh, avatar, homepage, firstPosition })
       })
     }
 

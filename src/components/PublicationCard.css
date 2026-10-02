@@ -1,8 +1,8 @@
 .publication {
   display: grid;
-  grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
-  gap: clamp(1rem, 2.5vw, 1.75rem);
-  padding: clamp(1rem, 2vw, 1.25rem);
+  grid-template-columns: minmax(0, 13rem) minmax(0, 1fr);
+  gap: clamp(0.85rem, 2vw, 1.25rem);
+  padding: clamp(0.85rem, 1.5vw, 1rem);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background-color: var(--surface);
@@ -49,41 +49,60 @@
 .publication__content {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.45rem;
   min-width: 0;
 }
 
 .publication__venues {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.4rem 0.65rem;
 }
 
-.publication__venue {
-  padding: 0.15rem 0.6rem;
+.publication__venue-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  max-width: 100%;
+}
+
+.publication__venue,
+.publication__ccf {
+  padding: 0.1rem 0.5rem;
+  border: 1px solid transparent;
   border-radius: 999px;
-  font-size: var(--step--1);
+  font-size: 0.75rem;
   font-weight: 600;
 }
 
+.publication__venue {
+  background-color: var(--venue-bg);
+}
+
+.publication__ccf {
+  flex-shrink: 0;
+  border-color: currentColor;
+  white-space: nowrap;
+}
+
 /* Blue conference / magenta journal / grey preprint. */
-.publication__venue--conference {
-  background-color: var(--accent-soft);
+.publication__venue-group--conference {
+  --venue-bg: var(--accent-soft);
   color: var(--accent);
 }
 
-.publication__venue--journal {
-  background-color: var(--tag-journal-soft);
+.publication__venue-group--journal {
+  --venue-bg: var(--tag-journal-soft);
   color: var(--tag-journal);
 }
 
-.publication__venue--preprint {
-  background-color: var(--bg-subtle);
+.publication__venue-group--preprint {
+  --venue-bg: var(--bg-subtle);
   color: var(--text-muted);
 }
 
 .publication__title {
-  font-size: var(--step-1);
+  font-size: clamp(1.05rem, 1rem + 0.25vw, 1.2rem);
 }
 
 .publication__authors,
@@ -128,6 +147,6 @@
      the cap shortens the box instead of the aspect ratio narrowing it. */
   .publication__media {
     width: 100%;
-    max-height: 11rem;
+    max-height: 9.5rem;
   }
 }

@@ -9,21 +9,19 @@
     "projects": "Projects"
   },
   "group": {
-    "teacher": "Teacher",
+    "teacher": "Faculties",
     "phdStudent": "PhD Students",
     "masterStudent": "Master Students",
     "alumni": "Alumni",
     "alumniPhd": "PhD",
-    "alumniMaster": "Master",
-    "join": {
-      "title": "Welcome to Join Us",
-      "body": "We keep seeking for strong and self-motivated PhD students, master students, and undergraduate interns."
-    }
+    "alumniMaster": "Master"
   },
   "home": {
     "slogan": "Beyond Intelligence",
     "lead": "TBD",
-    "intro": "TBD (Introduction)",
+    "intro": "Our research group aims to make machine intelligence more accessible and bring its benefits into everyday life. Our research spans on-device intelligence, large–small model collaboration, and human-centric applications in agents, recommender systems, and multimodal settings. Led by {chaoyueNiu}, our group is part of {fanWu}'s team in the Advanced Network Laboratory at {university}. We maintain close industry collaborations with Alibaba, Tencent, Huawei, and Li Auto, among other leading companies.",
+    "introNames": { "fanWu": "Prof. Fan Wu", "chaoyueNiu": "Associate Professor Chaoyue Niu" },
+    "university": "Shanghai Jiao Tong University",
     "newsTitle": "Recent news",
     "explore": "Explore",
     "cards": {

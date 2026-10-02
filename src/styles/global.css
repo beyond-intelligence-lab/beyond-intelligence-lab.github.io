@@ -115,6 +115,16 @@ a {
   text-decoration: none;
 }
 
+/* Text links share a style; header navigation and button links keep theirs. */
+a:where(:not(.header a, .button)) {
+  color: var(--accent);
+  text-underline-offset: 0.22em;
+}
+
+a:where(:not(.header a, .button)):is(:hover, :focus-visible, :active) {
+  text-decoration: underline;
+}
+
 ul,
 ol {
   list-style: none;

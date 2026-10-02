@@ -49,6 +49,9 @@ export default function MemberCard({ member }: { member: Member }) {
           <span className="visually-hidden">（{t.a11y.newTab}）</span>
         </a>
       )}
+      {member.firstPosition ? (
+        <p className="member__desc">{member.firstPosition[locale]}</p>
+      ) : null}
     </li>
   )
 }

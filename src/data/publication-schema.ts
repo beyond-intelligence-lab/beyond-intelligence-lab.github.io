@@ -20,6 +20,14 @@ export const LINK_KINDS = ['paper', 'code', 'project', 'slides', 'arxiv'] as con
 
 export type LinkKind = (typeof LINK_KINDS)[number]
 
+export const VENUE_KINDS = ['conference', 'journal', 'preprint'] as const
+export type VenueKind = (typeof VENUE_KINDS)[number]
+export type VenueEntry = {
+  fullName: string
+  kind: VenueKind
+  ccf?: 'A' | 'B' | 'C'
+}
+
 export type PublicationLink = {
   kind: LinkKind
   href: string
@@ -46,12 +54,14 @@ export type Publication = {
 }
 
 export type PublicationData = {
+  venues: ReadonlyMap<string, VenueEntry>
   topics: readonly TopicEntry[]
   publications: readonly Publication[]
 }
 
 // Singular, matching the `[[topic]]` / `[[publication]]` tables in the file.
-const ROOT_KEYS = ['topic', 'publication']
+const ROOT_KEYS = ['venue', 'topic', 'publication']
+const VENUE_KEYS = ['full_name', 'kind', 'ccf']
 const TOPIC_KEYS = ['id', 'en', 'zh']
 const PUBLICATION_KEYS = [
   'id',
@@ -95,6 +105,36 @@ export function parsePublicationData(
   // Catches a misspelled table name (`[[publication]]` instead of
   // `[[publications]]`), which would otherwise just look like an empty list.
   checkKeys(raw, ROOT_KEYS, '顶层')
+
+  // --- venue metadata (keyed by abbreviation, without the year) -------------
+  const venues = new Map<string, VenueEntry>()
+  const rawVenues = raw.venue ?? {}
+  if (!isRecord(rawVenues)) {
+    fail('venue', '必须是一张表（用 [venue] 声明）')
+  } else {
+    for (const [name, value] of Object.entries(rawVenues)) {
+      const where = `venue.${name}`
+      if (!name.trim()) fail(where, '简写不能为空')
+      if (!isRecord(value)) {
+        fail(where, '必须是一张包含 full_name、kind 和可选 ccf 的表')
+        continue
+      }
+      checkKeys(value, VENUE_KEYS, where)
+      const fullName = readString(value.full_name)
+      const kind = value.kind
+      const ccf = value.ccf
+      if (!fullName) fail(where, '缺少非空的 "full_name"')
+      if (!(VENUE_KINDS as readonly unknown[]).includes(kind)) {
+        fail(where, '"kind" 必须是 conference、journal 或 preprint')
+      }
+      if (ccf !== undefined && ccf !== 'A' && ccf !== 'B' && ccf !== 'C') {
+        fail(where, '"ccf" 必须是 A、B 或 C；无等级时省略')
+      }
+      if (fullName && (VENUE_KINDS as readonly unknown[]).includes(kind)) {
+        venues.set(name, { fullName, kind: kind as VenueKind, ccf: ccf as VenueEntry['ccf'] })
+      }
+    }
+  }
 
   // --- topics ---------------------------------------------------------------
   const topics: TopicEntry[] = []
@@ -248,5 +288,5 @@ export function parsePublicationData(
 
   reportProblems(problems, label)
 
-  return { topics, publications }
+  return { venues, topics, publications }
 }

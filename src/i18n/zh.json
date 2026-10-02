@@ -14,16 +14,14 @@
     "masterStudent": "硕士生",
     "alumni": "已毕业学生",
     "alumniPhd": "博士",
-    "alumniMaster": "硕士",
-    "join": {
-      "title": "欢迎加入我们",
-      "body": "课题组长期招收优秀的博士生、硕士生与本科生实习生，欢迎自驱力强、乐于钻研的同学加入。"
-    }
+    "alumniMaster": "硕士"
   },
   "home": {
     "slogan": "Beyond Intelligence",
     "lead": "TBD",
-    "intro": "TBD（实验室简介）",
+    "intro": "我们研究小组致力于让机器智能更普惠地融入日常生活。我们的研究涵盖端侧智能、大小模型协同，以及在智能体、推荐系统和多模态场景中以人为中心的应用。研究小组由{chaoyueNiu}带领，隶属于{university}先进网络实验室{fanWu}团队。我们与阿里、腾讯、华为、理想等头部企业保持深度产业合作。",
+    "introNames": { "fanWu": "吴帆教授", "chaoyueNiu": "牛超越副教授" },
+    "university": "上海交通大学",
     "newsTitle": "最新动态",
     "explore": "查看",
     "cards": {

@@ -28,8 +28,32 @@ export default function Group() {
           <aside className="join-callout">
             <InfoIcon className="join-callout__icon" />
             <div>
-              <p className="join-callout__title">{t.group.join.title}</p>
-              <p className="join-callout__body">{t.group.join.body}</p>
+              <p className="join-callout__title">
+                <span lang="en">Welcome to Join Us</span>
+                {' / '}
+                <span lang="zh-CN">欢迎加入我们</span>
+              </p>
+              <div className="join-callout__language" lang="en">
+                <p className="join-callout__body">
+                  We keep seeking for strong and self-motivated <strong>PhD students</strong>,{' '}
+                  <strong>master students</strong>, and <strong>undergraduate interns</strong>.
+                </p>
+                <p className="join-callout__body">
+                  Interested in on-device intelligence and large–small model collaboration for agents,
+                  recommendation, or multimodal interaction and understanding? Contact me via email at{' '}
+                  <a href="mailto:rvince@sjtu.edu.cn">rvince@sjtu.edu.cn</a>.
+                </p>
+              </div>
+              <div className="join-callout__language" lang="zh-CN">
+                <p className="join-callout__body">
+                  课题组长期招收优秀且自驱力强的<strong>博士生</strong>、<strong>硕士生</strong>
+                  与<strong>本科生实习生</strong>。
+                </p>
+                <p className="join-callout__body">
+                  如果你对端侧智能、大小模型协同及其在智能体、推荐系统和多模态交互与理解中的应用感兴趣，欢迎邮件联系我（
+                  <a href="mailto:rvince@sjtu.edu.cn">rvince@sjtu.edu.cn</a>）。
+                </p>
+              </div>
             </div>
           </aside>
 

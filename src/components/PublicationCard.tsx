@@ -1,6 +1,6 @@
 import type { ComponentType } from 'react'
 
-import { venueKind } from '../data/publications'
+import { venueInfo, venueKind } from '../data/publications'
 import type { LinkKind, Publication } from '../data/publications'
 import { useI18n } from '../i18n'
 import { CodeIcon, ExternalLinkIcon, FileTextIcon, SlidesIcon } from './icons'
@@ -39,11 +39,17 @@ export default function PublicationCard({ publication }: PublicationCardProps) {
         {/* Conference + journal extension of the same work show side by side,
             colour-coded by kind. */}
         <div className="publication__venues">
-          {publication.venues.map((venue) => (
-            <p key={venue} className={`publication__venue publication__venue--${venueKind(venue)}`}>
-              {venue}
-            </p>
-          ))}
+          {publication.venues.map((venue) => {
+            const info = venueInfo(venue)
+            return (
+              <div key={venue} className={`publication__venue-group publication__venue-group--${venueKind(venue)}`}>
+                <span className="publication__venue" title={info?.fullName}>
+                  {venue}
+                </span>
+                {info?.ccf ? <span className="publication__ccf">CCF {info.ccf}</span> : null}
+              </div>
+            )
+          })}
         </div>
         <h4 className="publication__title">{publication.title}</h4>
         <p className="publication__authors">{publication.authors.join(', ')}</p>

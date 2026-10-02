@@ -131,7 +131,22 @@ export default function Home() {
           between the two. */}
       <section className="home-intro">
         <div className="container">
-          <p className="home-intro__text">{t.home.intro}</p>
+          <p className="home-intro__text">
+            {t.home.intro.split(/(\{fanWu\}|\{chaoyueNiu\}|\{university\})/g).map((part, index) => {
+              if (part === '{university}') {
+                return (
+                  <span key={index} className="home-intro__university">
+                    <img className="home-intro__emblem" src="/sjtu-emblem.png" alt="" width="240" height="240" />
+                    {t.home.university}
+                  </span>
+                )
+              }
+              const nameKey = part === '{fanWu}' ? 'fanWu' : part === '{chaoyueNiu}' ? 'chaoyueNiu' : null
+              return nameKey ? (
+                <Link key={index} to="/group">{t.home.introNames[nameKey]}</Link>
+              ) : part
+            })}
+          </p>
         </div>
       </section>
 
