@@ -30,6 +30,7 @@ homepage = "https://www.cs.sjtu.edu.cn/en/jiaoshiml/niuchaoyue.html"
 [[phdStudent]]
 en = "Tiancheng Fang"
 zh = "方天成"
+avatar = "/images/avatars/tiancheng-fang.webp"
 
 [[phdStudent]]
 en = "Hang Zeng"
@@ -126,6 +127,7 @@ zh = "薛佳锐"
 [[masterStudent]]
 en = "Mingyu Lin"
 zh = "林明宇"
+avatar = "/images/avatars/mingyu-lin.webp"
 
 [[alumniPhd]]
 en = "Yucheng Ding"
