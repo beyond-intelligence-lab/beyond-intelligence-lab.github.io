@@ -157,8 +157,8 @@
     display: inline-flex;
   }
 
-  /* Phone: the globe reads on its own (the button carries an aria-label), and
-     dropping "EN" plus tighter padding is what buys the wordmark its room. */
+  /* Phone: the language icon reads on its own (the button carries an aria-label).
+     Dropping "EN" plus tighter padding buys the wordmark its room. */
   .icon-button__text {
     display: none;
   }

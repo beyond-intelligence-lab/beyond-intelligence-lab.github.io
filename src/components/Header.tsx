@@ -5,7 +5,7 @@ import { NAV_ITEMS } from '../data/site'
 import { useTheme } from '../hooks/useTheme'
 import { useI18n } from '../i18n'
 import { LOCALE_LABELS, LOCALES } from '../i18n/types'
-import { CloseIcon, GlobeIcon, MenuIcon, MoonIcon, SunIcon } from './icons'
+import { CloseIcon, LanguagesIcon, MenuIcon, MoonIcon, SunIcon } from './icons'
 import './Header.css'
 
 export default function Header() {
@@ -74,7 +74,7 @@ export default function Header() {
             title={`${t.a11y.toggleLanguage}: ${LOCALE_LABELS[nextLocale]}`}
             aria-label={`${t.a11y.toggleLanguage}: ${LOCALE_LABELS[nextLocale]}`}
           >
-            <GlobeIcon />
+            <LanguagesIcon />
             <span className="icon-button__text">{LOCALE_LABELS[locale]}</span>
           </button>
 
