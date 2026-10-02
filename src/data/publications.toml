@@ -63,7 +63,7 @@ authors = ["Tianxing Wang", "Mingming Zhao", "Shuai Huang", "Huiyang Xu", "Chaoy
 venues = ["arXiv"]
 year = 2026
 topics = ["agent"]
-image = "/publications/trove-2026.png"
+image = "/publications/trove-2026.webp"
 links = { arxiv = "https://arxiv.org/abs/2609.05019" }
 
 [[publication]]
@@ -73,7 +73,7 @@ authors = ["Zhuoqiang Cai", "Yujie Sun", "Chaoyue Niu", "Hongyun Yu", "Zhiwen Ch
 venues = ["ACM MM 2026"]
 year = 2026
 topics = ["vision-3d"]
-image = "/publications/echo-2026.png"
+image = "/publications/echo-2026.webp"
 links = { arxiv = "https://arxiv.org/abs/2609.05506" }
 
 [[publication]]
@@ -83,7 +83,7 @@ authors = ["Yijie Ma", "Chaoyue Niu", "Fan Wu", "Guihai Chen"]
 venues = ["arXiv"]
 year = 2026
 topics = ["agent"]
-image = "/publications/reflection-gui-agents-2026.png"
+image = "/publications/reflection-gui-agents-2026.webp"
 links = { arxiv = "https://arxiv.org/abs/2608.24015" }
 
 [[publication]]
@@ -93,7 +93,7 @@ authors = ["Hang Zeng", "Xiangyu Liu", "Yong Hu", "Chaoyue Niu", "Jiarui Zhang",
 venues = ["arXiv"]
 year = 2026
 topics = ["on-device-llm", "routing"]
-image = "/publications/seek-help-2026.png"
+image = "/publications/seek-help-2026.webp"
 links = { arxiv = "https://arxiv.org/abs/2604.17827" }
 
 [[publication]]
@@ -103,7 +103,7 @@ authors = ["Jiarui Zhang", "Xiangyu Liu", "Yong Hu", "Chaoyue Niu", "Hang Zeng",
 venues = ["NeurIPS 2026"]
 year = 2026
 topics = ["routing"]
-image = "/publications/llm-routing-multiturn-2026.png"
+image = "/publications/llm-routing-multiturn-2026.webp"
 links = { arxiv = "https://arxiv.org/abs/2604.12385" }
 
 [[publication]]
@@ -113,7 +113,7 @@ authors = ["Xuezhen Tu", "Jingyu Wu", "Fangyu Kang", "Qingpeng Nong", "Kaijin Zh
 venues = ["arXiv"]
 year = 2026
 topics = ["vision-3d"]
-image = "/publications/video-grounding-2026.jpg"
+image = "/publications/video-grounding-2026.webp"
 links = { arxiv = "https://arxiv.org/abs/2604.08014" }
 
 [[publication]]
@@ -123,7 +123,7 @@ authors = ["Yujie Sun", "Zhuoqiang Cai", "Chaoyue Niu", "Jianchuan Chen", "Zhiwe
 venues = ["CVPR 2026"]
 year = 2026
 topics = ["vision-3d"]
-image = "/publications/fhavatar-2026.png"
+image = "/publications/fhavatar-2026.webp"
 links = { arxiv = "https://arxiv.org/abs/2603.23345" }
 
 [[publication]]
@@ -133,7 +133,7 @@ authors = ["Tiancheng Fang", "Bowen Pan", "Lingxi Chen", "Jiangjing Lyu", "Cheng
 venues = ["CVPR 2026"]
 year = 2026
 topics = ["vision-3d"]
-image = "/publications/viaformer-2026.png"
+image = "/publications/viaformer-2026.webp"
 links = { paper = "https://openaccess.thecvf.com/content/CVPR2026/html/Fang_VIAFormer_Voxel-Image_Alignment_Transformer_for_High-Fidelity_Voxel_Refinement_CVPR_2026_paper.html" }
 
 [[publication]]
@@ -179,7 +179,7 @@ authors = ["Chao Shi", "Shenghao Jia", "Jinhui Liu", "Yong Zhang", "Liangchao Zh
 venues = ["SIGGRAPH Asia 2025"]
 year = 2025
 topics = ["vision-3d", "mobile-systems"]
-image = "/publications/hrm2avatar-2025.png"
+image = "/publications/hrm2avatar-2025.webp"
 links = { paper = "https://doi.org/10.1145/3757377.3763894" }
 
 [[publication]]
@@ -189,7 +189,7 @@ authors = ["Hang Zeng", "Chaoyue Niu", "Fan Wu", "Chengfei Lv", "Guihai Chen"]
 venues = ["CIKM 2025"]
 year = 2025
 topics = ["device-cloud", "on-device-llm"]
-image = "/publications/querier-aware-llm-2025.png"
+image = "/publications/querier-aware-llm-2025.webp"
 links = { paper = "https://doi.org/10.1145/3746252.3761389" }
 
 [[publication]]
@@ -208,7 +208,7 @@ authors = ["Zewei Xin", "Qinya Li", "Chaoyue Niu", "Fan Wu", "Guihai Chen"]
 venues = ["ICCV 2025"]
 year = 2025
 topics = ["routing"]
-image = "/publications/routing-text-to-image-2025.png"
+image = "/publications/routing-text-to-image-2025.webp"
 links = { paper = "https://doi.org/10.1109/ICCV51701.2025.01811" }
 
 [[publication]]
@@ -218,7 +218,7 @@ authors = ["Gucongcong Fan", "Chaoyue Niu", "Chengfei Lyu", "Fan Wu", "Guihai Ch
 venues = ["NeurIPS 2025"]
 year = 2025
 topics = ["agent", "on-device-llm"]
-image = "/publications/core-mobile-agents-2025.png"
+image = "/publications/core-mobile-agents-2025.webp"
 links = { paper = "http://papers.nips.cc/paper_files/paper/2025/hash/636f1f78f7096caf126afaa27deb7b53-Abstract-Conference.html" }
 
 [[publication]]
@@ -237,7 +237,7 @@ authors = ["Yucheng Ding", "Yangwenjian Tan", "Xiangyu Liu", "Chaoyue Niu", "Fan
 venues = ["KDD 2025"]
 year = 2025
 topics = ["federated", "on-device-llm"]
-image = "/publications/personalized-lm-2025.png"
+image = "/publications/personalized-lm-2025.webp"
 links = { paper = "https://doi.org/10.1145/3690624.3709211" }
 
 [[publication]]
@@ -256,7 +256,7 @@ authors = ["Zhengxiang Huang", "Chaoyue Niu", "Zhaode Wang", "Jiarui Xue", "Hanm
 venues = ["arXiv"]
 year = 2025
 topics = ["on-device-llm", "mobile-systems"]
-image = "/publications/mnn-aecs-2025.png"
+image = "/publications/mnn-aecs-2025.webp"
 links = { arxiv = "https://arxiv.org/abs/2506.19884" }
 
 [[publication]]
@@ -266,7 +266,7 @@ authors = ["Jiarui Zhang", "Xiangyu Liu", "Yong Hu", "Chaoyue Niu", "Fan Wu", "G
 venues = ["NeurIPS 2025"]
 year = 2025
 topics = ["routing", "on-device-llm"]
-image = "/publications/ragrouter-2025.png"
+image = "/publications/ragrouter-2025.webp"
 links = { paper = "http://papers.nips.cc/paper_files/paper/2025/hash/1759a83b007f0685c3fbc460fa1b6395-Abstract-Conference.html" }
 
 [[publication]]
@@ -276,7 +276,7 @@ authors = ["Chaoyue Niu", "Yucheng Ding", "Junhui Lu", "Zhengxiang Huang", "Hang
 venues = ["arXiv"]
 year = 2025
 topics = ["device-cloud", "on-device-llm"]
-image = "/publications/collab-learning-survey-2025.png"
+image = "/publications/collab-learning-survey-2025.webp"
 links = { arxiv = "https://arxiv.org/abs/2504.15300" }
 
 [[publication]]
@@ -394,7 +394,7 @@ authors = ["Yucheng Ding", "Chaoyue Niu", "Fan Wu", "Shaojie Tang", "Chengfei Ly
 venues = ["arXiv"]
 year = 2023
 topics = ["device-cloud"]
-image = "/publications/dc-ccl-2023.png"
+image = "/publications/dc-ccl-2023.webp"
 links = { arxiv = "https://arxiv.org/abs/2303.10361" }
 
 [[publication]]
@@ -458,7 +458,7 @@ authors = ["Yucheng Ding", "Chaoyue Niu", "Fan Wu", "Shaojie Tang", "Chengfei Ly
 venues = ["NeurIPS 2022"]
 year = 2022
 topics = ["federated"]
-image = "/publications/federated-submodel-2022.png"
+image = "/publications/federated-submodel-2022.webp"
 links = { paper = "http://papers.nips.cc/paper_files/paper/2022/hash/002262941c9edfd472a79298b2ac5e17-Abstract-Conference.html" }
 
 [[publication]]
@@ -468,7 +468,7 @@ authors = ["Renjie Gu", "Chaoyue Niu", "Fan Wu", "Guihai Chen", "Chun Hu", "Chen
 venues = ["ACM CSUR 2022"]
 year = 2022
 topics = ["device-cloud", "federated"]
-image = "/publications/client-based-ml-survey-2022.png"
+image = "/publications/client-based-ml-survey-2022.webp"
 links = { paper = "https://doi.org/10.1145/3424660" }
 
 [[publication]]
@@ -523,7 +523,7 @@ authors = ["Chaoyue Niu", "Zhenzhe Zheng", "Fan Wu", "Xiaofeng Gao", "Guihai Che
 venues = ["IEEE TKDE 2019"]
 year = 2019
 topics = ["data-market"]
-image = "/publications/data-truthfulness-2019.png"
+image = "/publications/data-truthfulness-2019.webp"
 links = { paper = "https://doi.org/10.1109/TKDE.2018.2822727" }
 
 [[publication]]
@@ -542,7 +542,7 @@ authors = ["Chaoyue Niu", "Minping Zhou", "Zhenzhe Zheng", "Fan Wu", "Guihai Che
 venues = ["JNCA 2017"]
 year = 2017
 topics = ["data-market"]
-image = "/publications/era-ad-exchange-2017.png"
+image = "/publications/era-ad-exchange-2017.webp"
 links = { paper = "https://doi.org/10.1016/j.jnca.2017.08.012" }
 
 [[publication]]
