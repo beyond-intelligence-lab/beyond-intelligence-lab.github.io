@@ -54,6 +54,7 @@
 }
 
 .publication__venues {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem 0.65rem;
@@ -68,6 +69,8 @@
 
 .publication__venue,
 .publication__ccf {
+  -webkit-user-select: none;
+  user-select: none;
   padding: 0.1rem 0.5rem;
   border: 1px solid transparent;
   border-radius: 999px;
@@ -77,6 +80,31 @@
 
 .publication__venue {
   background-color: var(--venue-bg);
+}
+
+/* Anchor to the tag row so long names also fit beside the sidebar or on mobile. */
+.publication__tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  z-index: 10;
+  width: max-content;
+  max-width: min(26rem, 100%);
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  visibility: hidden;
+}
+
+.publication__venue:not([data-tooltip-dismissed]):is(:hover, :focus-visible) .publication__tooltip {
+  visibility: visible;
 }
 
 .publication__ccf {

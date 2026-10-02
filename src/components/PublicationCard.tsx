@@ -1,3 +1,4 @@
+import { useId, useState } from 'react'
 import type { ComponentType } from 'react'
 
 import { venueInfo, venueKind } from '../data/publications'
@@ -21,6 +22,8 @@ type PublicationCardProps = {
 
 export default function PublicationCard({ publication }: PublicationCardProps) {
   const { t } = useI18n()
+  const tooltipPrefix = useId()
+  const [dismissedVenue, setDismissedVenue] = useState<string | null>(null)
 
   return (
     <li className="publication">
@@ -39,12 +42,28 @@ export default function PublicationCard({ publication }: PublicationCardProps) {
         {/* Conference + journal extension of the same work show side by side,
             colour-coded by kind. */}
         <div className="publication__venues">
-          {publication.venues.map((venue) => {
+          {publication.venues.map((venue, index) => {
             const info = venueInfo(venue)
+            const tooltipId = `${tooltipPrefix}-venue-${index}`
             return (
               <div key={venue} className={`publication__venue-group publication__venue-group--${venueKind(venue)}`}>
-                <span className="publication__venue" title={info?.fullName}>
+                <span
+                  className="publication__venue"
+                  tabIndex={info ? 0 : undefined}
+                  aria-describedby={info ? tooltipId : undefined}
+                  data-tooltip-dismissed={dismissedVenue === venue || undefined}
+                  onMouseEnter={() => setDismissedVenue(null)}
+                  onFocus={() => setDismissedVenue(null)}
+                  onKeyDown={(event) => {
+                    if (event.key === 'Escape') setDismissedVenue(venue)
+                  }}
+                >
                   {venue}
+                  {info ? (
+                    <span id={tooltipId} role="tooltip" className="publication__tooltip">
+                      {info.fullName}
+                    </span>
+                  ) : null}
                 </span>
                 {info?.ccf ? <span className="publication__ccf">CCF {info.ccf}</span> : null}
               </div>

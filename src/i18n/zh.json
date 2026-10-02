@@ -18,6 +18,7 @@
   },
   "home": {
     "slogan": "Beyond Intelligence",
+    "description": "Beyond Intelligence Lab 是上海交通大学计算机学院先进网络实验室的研究小组，由牛超越副教授带领，隶属吴帆教授团队，研究端侧智能、大小模型协同、智能体、推荐系统与多模态智能。",
     "lead": "TBD",
     "intro": "我们研究小组致力于让机器智能更普惠地融入日常生活。我们的研究涵盖端侧智能、大小模型协同，以及在智能体、推荐系统和多模态场景中以人为中心的应用。研究小组由{chaoyueNiu}带领，隶属于{university}先进网络实验室{fanWu}团队。我们与阿里、腾讯、华为、理想等头部企业保持深度产业合作。",
     "introNames": { "fanWu": "吴帆教授", "chaoyueNiu": "牛超越副教授" },
@@ -25,8 +26,8 @@
     "newsTitle": "最新动态",
     "explore": "查看",
     "cards": {
-      "research": { "title": "研究方向", "blurb": "TBD" },
-      "projects": { "title": "项目", "blurb": "TBD" }
+      "research": { "title": "研究方向" },
+      "projects": { "title": "项目" }
     }
   },
   "projects": {

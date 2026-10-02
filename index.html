@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Beyond Intelligence Lab" />
+    <meta name="description" content="Beyond Intelligence Lab，上海交通大学计算机学院先进网络实验室研究小组，由牛超越副教授带领，隶属吴帆教授团队，研究端侧智能、大小模型协同、智能体、推荐系统与多模态智能。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Beyond Intelligence Lab" />
+    <meta property="og:title" content="Beyond Intelligence Lab · 上海交通大学 Shanghai Jiao Tong University" />
+    <meta property="og:description" content="上海交通大学计算机学院先进网络实验室研究小组，研究端侧智能、大小模型协同、智能体、推荐系统与多模态智能。" />
+    <meta property="og:image" content="https://beyond-intelligence-lab.github.io/app-icon-light-192.png" />
+    <meta property="og:image:alt" content="Beyond Intelligence Lab" />
+    <meta name="twitter:card" content="summary" />
     <!-- Two tab icons, one per colour scheme: the browser picks by
          prefers-color-scheme, which is what the tab strip itself follows. -->
     <link
@@ -21,7 +28,36 @@
       media="(prefers-color-scheme: dark)"
     />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <title>Beyond Intelligence Lab</title>
+    <title>Beyond Intelligence Lab · 上海交通大学 Shanghai Jiao Tong University</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ResearchOrganization",
+        "@id": "https://beyond-intelligence-lab.github.io/#organization",
+        "name": "Beyond Intelligence Lab",
+        "url": "https://beyond-intelligence-lab.github.io/",
+        "logo": "https://beyond-intelligence-lab.github.io/app-icon-light-192.png",
+        "description": "A research group in the Advanced Network Laboratory at Shanghai Jiao Tong University, led by Chaoyue Niu within Fan Wu's team. Research focuses on on-device intelligence, large–small model collaboration, agents, recommendation and multimodal intelligence.",
+        "knowsAbout": ["端侧智能", "大小模型协同", "智能体", "推荐系统", "多模态智能", "On-device intelligence", "Large–small model collaboration"],
+        "parentOrganization": {
+          "@type": "ResearchOrganization",
+          "name": "先进网络实验室",
+          "alternateName": "Advanced Network Laboratory",
+          "parentOrganization": {
+            "@type": "EducationalOrganization",
+            "name": "上海交通大学计算机学院",
+            "alternateName": "School of Computer Science, Shanghai Jiao Tong University",
+            "url": "https://www.cs.sjtu.edu.cn/",
+            "parentOrganization": {
+              "@type": "CollegeOrUniversity",
+              "name": "上海交通大学",
+              "alternateName": ["Shanghai Jiao Tong University", "SJTU"],
+              "url": "https://www.sjtu.edu.cn/"
+            }
+          }
+        }
+      }
+    </script>
     <script>
       // Applied before first paint so the theme never flashes.
       (function () {

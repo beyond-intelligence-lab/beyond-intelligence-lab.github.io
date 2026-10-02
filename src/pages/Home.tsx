@@ -2,7 +2,7 @@ import { useState } from 'react'
 import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 
-import { ArrowRightIcon } from '../components/icons'
+import { ArrowRightIcon, ProjectsIcon, ResearchIcon } from '../components/icons'
 import { NEWS_ITEMS } from '../data/news'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { useI18n } from '../i18n'
@@ -14,12 +14,11 @@ import './Home.css'
 const RECENT_COUNT = 5
 
 /**
- * The two cards under the news. Only the route lives here; the titles and
- * blurbs are page copy and sit in the dictionaries, like the rest of the page.
+ * The two cards under the news. Titles sit in the dictionaries.
  */
 const EXPLORE_CARDS = [
-  { key: 'research', to: '/publications' },
-  { key: 'projects', to: '/projects' },
+  { key: 'research', to: '/publications', icon: ResearchIcon },
+  { key: 'projects', to: '/projects', icon: ProjectsIcon },
 ] as const
 
 /** `2026-08` announces a month; `2026-08-26` names a day. */
@@ -110,7 +109,7 @@ function GlowField() {
 
 export default function Home() {
   const { t, locale } = useI18n()
-  // The slogan is the page's h1, so the document title is just the site name.
+  // The document title identifies the lab and university without changing the banner.
   usePageMeta('')
 
   const recent = NEWS_ITEMS.slice(0, RECENT_COUNT)
@@ -192,10 +191,10 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <ul className="explore">
-            {EXPLORE_CARDS.map(({ key, to }) => (
+            {EXPLORE_CARDS.map(({ key, to, icon: Icon }) => (
               <li key={key} className="explore__card">
+                <Icon className="explore__decoration" />
                 <h2 className="explore__title">{t.home.cards[key].title}</h2>
-                <p className="explore__blurb">{t.home.cards[key].blurb}</p>
                 {/* Both buttons read "Explore", so the card's title is folded
                     into the accessible name to tell them apart. */}
                 <Link className="button button--ghost explore__action" to={to}>

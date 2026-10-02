@@ -6,6 +6,7 @@
 # 3. venues 是标签列表，按展示顺序写：同一工作的会议版 + 期刊扩展版放在一条里，
 #    如 ["ICDM 2023", "IEEE TSC 2026"]；已正式发表的不再单列 arXiv 版本。
 #    下方 [venue] 用不带年份的简写索引 full_name（悬停全称）、kind 和可选 ccf（A/B/C）。
+#    full_name 只写会议/期刊全称，不含届数和年份；tag 悬停或键盘聚焦时显示 tooltip。
 #    颜色按 kind 分：conference=蓝、journal=紫红、preprint=灰；无索引时默认会议色。
 #    年份可在标签中间："ICMR 2025 Workshop" 对应 "ICMR Workshop"，不继承主会等级。
 #    无 CCF 等级时省略 ccf，页面不会显示等级标签。

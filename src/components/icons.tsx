@@ -1,11 +1,13 @@
 import {
   ArrowRight,
+  Blocks,
   Code,
   ExternalLink,
   FileText,
   Info,
   Languages,
   Menu,
+  Microscope,
   Moon,
   Presentation,
   Sun,
@@ -65,4 +67,12 @@ export function ExternalLinkIcon({ className }: IconProps) {
 
 export function InfoIcon({ className }: IconProps) {
   return <Info {...base} className={className} />
+}
+
+export function ResearchIcon({ className }: IconProps) {
+  return <Microscope {...base} className={className} />
+}
+
+export function ProjectsIcon({ className }: IconProps) {
+  return <Blocks {...base} className={className} />
 }

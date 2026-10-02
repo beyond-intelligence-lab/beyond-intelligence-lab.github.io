@@ -130,6 +130,8 @@
 }
 
 .explore__card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -150,16 +152,23 @@
 }
 
 .explore__title {
+  position: relative;
   font-size: var(--step-2);
 }
 
-.explore__blurb {
-  /* Pushes the button to the bottom, so cards of unequal text line up. */
-  flex: 1;
-  color: var(--text-muted);
+.explore__decoration {
+  position: absolute;
+  right: -1.75rem;
+  bottom: -1.75rem;
+  width: clamp(9rem, 13vw, 12rem);
+  height: clamp(9rem, 13vw, 12rem);
+  color: var(--accent);
+  opacity: 0.12;
+  pointer-events: none;
 }
 
 .explore__action {
+  position: relative;
   margin-top: 0.35rem;
 }
 

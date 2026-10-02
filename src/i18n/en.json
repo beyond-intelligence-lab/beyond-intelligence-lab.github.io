@@ -18,6 +18,7 @@
   },
   "home": {
     "slogan": "Beyond Intelligence",
+    "description": "Beyond Intelligence Lab at Shanghai Jiao Tong University studies on-device intelligence, large–small model collaboration, agents, recommendation and multimodal intelligence. Led by Chaoyue Niu within Fan Wu’s team in the Advanced Network Laboratory, School of Computer Science.",
     "lead": "TBD",
     "intro": "Our research group aims to make machine intelligence more accessible and bring its benefits into everyday life. Our research spans on-device intelligence, large–small model collaboration, and human-centric applications in agents, recommender systems, and multimodal settings. Led by {chaoyueNiu}, our group is part of {fanWu}'s team in the Advanced Network Laboratory at {university}. We maintain close industry collaborations with Alibaba, Tencent, Huawei, and Li Auto, among other leading companies.",
     "introNames": { "fanWu": "Prof. Fan Wu", "chaoyueNiu": "Associate Professor Chaoyue Niu" },
@@ -25,8 +26,8 @@
     "newsTitle": "Recent news",
     "explore": "Explore",
     "cards": {
-      "research": { "title": "Research", "blurb": "TBD" },
-      "projects": { "title": "Projects", "blurb": "TBD" }
+      "research": { "title": "Research" },
+      "projects": { "title": "Projects" }
     }
   },
   "projects": {
