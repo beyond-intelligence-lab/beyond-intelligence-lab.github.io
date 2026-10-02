@@ -58,14 +58,19 @@ export const PUBLICATIONS: readonly Publication[] = [...data.publications].sort(
 )
 
 const counts = new Map<string, number>()
-for (const publication of PUBLICATIONS) {
+// Where a topic's newest paper sits in the list. `PUBLICATIONS` is already in
+// display order, so a topic's first sighting is its most recent work — and
+// ranking by position (not just year) keeps the areas in step with the cards:
+// ACM MM ahead of KDD within 2026 means 3D Vision ahead of Data Markets too.
+const rank = new Map<string, number>()
+PUBLICATIONS.forEach((publication, index) => {
   for (const id of publication.topics) {
     counts.set(id, (counts.get(id) ?? 0) + 1)
+    if (!rank.has(id)) rank.set(id, index)
   }
-}
+})
 
-/** Declaration order, so the filter row follows the file rather than the alphabet. */
-export const TOPICS: readonly Topic[] = data.topics.map((topic) => ({
-  ...topic,
-  count: counts.get(topic.id) ?? 0,
-}))
+/** Newest work first; a topic with nothing published sinks to the bottom. */
+export const TOPICS: readonly Topic[] = data.topics
+  .map((topic) => ({ ...topic, count: counts.get(topic.id) ?? 0 }))
+  .sort((a, b) => (rank.get(a.id) ?? Infinity) - (rank.get(b.id) ?? Infinity))

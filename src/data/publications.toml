@@ -87,15 +87,6 @@ image = "/publications/reflection-gui-agents-2026.png"
 links = { arxiv = "https://arxiv.org/abs/2608.24015" }
 
 [[publication]]
-id = "offline-to-online-rl-2026"
-title = "Efficient Device-Cloud Collaborative Offline-to-Online Reinforcement Learning"
-authors = ["Honglan Huang", "Wei Shi", "Chaoyue Niu"]
-venues = ["AAMAS 2026"]
-year = 2026
-topics = ["device-cloud"]
-links = { paper = "https://dl.acm.org/doi/10.65109/STCC8399" }
-
-[[publication]]
 id = "seek-help-2026"
 title = "Learning to Seek Help: Dynamic Collaboration Between Small and Large Language Models"
 authors = ["Hang Zeng", "Xiangyu Liu", "Yong Hu", "Chaoyue Niu", "Jiarui Zhang", "Shaojie Tang", "Fan Wu", "Guihai Chen"]
@@ -104,15 +95,6 @@ year = 2026
 topics = ["on-device-llm", "routing"]
 image = "/publications/seek-help-2026.png"
 links = { arxiv = "https://arxiv.org/abs/2604.17827" }
-
-[[publication]]
-id = "privacy-annotation-2026"
-title = "Automated Annotation of Privacy Information in User Interactions with Large Language Models"
-authors = ["Hang Zeng", "Xiangyu Liu", "Yong Hu", "Chaoyue Niu", "Fan Wu", "Shaojie Tang", "Guihai Chen"]
-venues = ["KDD 2026"]
-year = 2026
-topics = ["data-market"]
-links = { paper = "https://doi.org/10.1145/3770854.3785680" }
 
 [[publication]]
 id = "llm-routing-multiturn-2026"
@@ -153,6 +135,24 @@ year = 2026
 topics = ["vision-3d"]
 image = "/publications/viaformer-2026.png"
 links = { paper = "https://openaccess.thecvf.com/content/CVPR2026/html/Fang_VIAFormer_Voxel-Image_Alignment_Transformer_for_High-Fidelity_Voxel_Refinement_CVPR_2026_paper.html" }
+
+[[publication]]
+id = "offline-to-online-rl-2026"
+title = "Efficient Device-Cloud Collaborative Offline-to-Online Reinforcement Learning"
+authors = ["Honglan Huang", "Wei Shi", "Chaoyue Niu"]
+venues = ["AAMAS 2026"]
+year = 2026
+topics = ["device-cloud"]
+links = { paper = "https://dl.acm.org/doi/10.65109/STCC8399" }
+
+[[publication]]
+id = "privacy-annotation-2026"
+title = "Automated Annotation of Privacy Information in User Interactions with Large Language Models"
+authors = ["Hang Zeng", "Xiangyu Liu", "Yong Hu", "Chaoyue Niu", "Fan Wu", "Shaojie Tang", "Guihai Chen"]
+venues = ["KDD 2026"]
+year = 2026
+topics = ["data-market"]
+links = { paper = "https://doi.org/10.1145/3770854.3785680" }
 
 [[publication]]
 id = "livestreaming-2023"
