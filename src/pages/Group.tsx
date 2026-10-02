@@ -13,6 +13,8 @@ export default function Group() {
   // Empty sections are not rendered at all, so the page is exactly what
   // `group.toml` contains.
   const sections = GROUP_SECTIONS.filter((section) => section.members.length > 0)
+  const currentSections = sections.filter((section) => !section.id.startsWith('alumni'))
+  const alumniSections = sections.filter((section) => section.id.startsWith('alumni'))
 
   return (
     <>
@@ -32,7 +34,7 @@ export default function Group() {
           </aside>
 
           <div className="group">
-            {sections.map((section) => (
+            {currentSections.map((section) => (
               <div key={section.id}>
                 <h2 className="group__title">{t.group[section.id]}</h2>
                 <ul className="group__list">
@@ -42,6 +44,23 @@ export default function Group() {
                 </ul>
               </div>
             ))}
+            {alumniSections.length > 0 && (
+              <div>
+                <h2 className="group__title">{t.group.alumni}</h2>
+                <div className="group__alumni">
+                  {alumniSections.map((section) => (
+                    <div key={section.id}>
+                      <h3 className="group__subtitle">{t.group[section.id]}</h3>
+                      <ul className="group__list">
+                        {section.members.map((member) => (
+                          <MemberCard key={member.en} member={member} />
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

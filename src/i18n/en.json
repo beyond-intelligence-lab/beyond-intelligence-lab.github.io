@@ -13,6 +13,8 @@
     "phdStudent": "PhD Students",
     "masterStudent": "Master Students",
     "alumni": "Alumni",
+    "alumniPhd": "PhD",
+    "alumniMaster": "Master",
     "join": {
       "title": "Welcome to Join Us",
       "body": "We keep seeking for strong and self-motivated PhD students, master students, and undergraduate interns."

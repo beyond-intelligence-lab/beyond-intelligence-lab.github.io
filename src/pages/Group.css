@@ -63,3 +63,13 @@
   grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
   gap: clamp(1.25rem, 2.5vw, 2rem);
 }
+
+.group__alumni {
+  display: grid;
+  gap: 2rem;
+}
+
+.group__subtitle {
+  margin-bottom: 1rem;
+  font-size: var(--step-1);
+}

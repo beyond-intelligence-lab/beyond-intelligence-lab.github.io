@@ -11,7 +11,13 @@
 // Explicit extension — see the note in `publication-schema.ts`.
 import { isRecord, readString, reportProblems } from './schema-utils.ts'
 
-export const GROUP_SECTION_IDS = ['teacher', 'phdStudent', 'masterStudent', 'alumni'] as const
+export const GROUP_SECTION_IDS = [
+  'teacher',
+  'phdStudent',
+  'masterStudent',
+  'alumniPhd',
+  'alumniMaster',
+] as const
 
 export type GroupSectionId = (typeof GROUP_SECTION_IDS)[number]
 

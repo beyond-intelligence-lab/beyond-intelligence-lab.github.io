@@ -1,10 +1,11 @@
 # 团队成员 —— 改这个文件就够了，推送到 main 后由 GitHub Actions 自动发布。
 #
-# 四组，组内按文件里的顺序展示，某组留空则该栏不显示：
+# 组内按文件里的顺序展示，某组留空则该栏不显示：
 #   [[teacher]]        教师
 #   [[phdStudent]]     博士生
 #   [[masterStudent]]  硕士生
-#   [[alumni]]         已毕业学生
+#   [[alumniPhd]]      已毕业博士生
+#   [[alumniMaster]]   已毕业硕士生
 #
 # 每个人只写两三个字段（avatar / homepage 可选）：
 #   en = "Chaoyue Niu"                          英文界面显示的名字
@@ -125,3 +126,27 @@ zh = "薛佳锐"
 [[masterStudent]]
 en = "Mingyu Lin"
 zh = "林明宇"
+
+[[alumniPhd]]
+en = "Yucheng Ding"
+zh = "丁雨成"
+
+[[alumniMaster]]
+en = "Yangwenjian Tan"
+zh = "谭杨汶坚"
+
+[[alumniMaster]]
+en = "Yikai Yan"
+zh = "严谊凯"
+
+[[alumniMaster]]
+en = "Yufei Zhu"
+zh = "朱雨霏"
+
+[[alumniMaster]]
+en = "Xinyao Yang"
+zh = "杨昕尧"
+
+[[alumniMaster]]
+en = "Shenghao Jia"
+zh = "贾晟浩"
