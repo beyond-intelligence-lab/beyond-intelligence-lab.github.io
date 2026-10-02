@@ -31,6 +31,7 @@ homepage = "https://www.cs.sjtu.edu.cn/en/jiaoshiml/niuchaoyue.html"
 [[phdStudent]]
 en = "Tiancheng Fang"
 zh = "方天宬"
+avatar = "/images/avatars/tiancheng-fang.webp"
 
 [[phdStudent]]
 en = "Hang Zeng"
@@ -55,6 +56,7 @@ homepage = "https://scholar.google.com/citations?user=_X8souwAAAAJ"
 [[phdStudent]]
 en = "Gucongcong Fan"
 zh = "范顾聪聪"
+avatar = "/images/avatars/gucongcong-fan.webp"
 
 [[phdStudent]]
 en = "Jiarui Zhang"
@@ -109,6 +111,7 @@ zh = "王天行"
 [[masterStudent]]
 en = "Bohao Ai"
 zh = "艾博昊"
+avatar = "/images/avatars/bohao-ai.webp"
 
 [[masterStudent]]
 en = "Shengheng Chen"
@@ -127,6 +130,7 @@ zh = "薛佳锐"
 [[masterStudent]]
 en = "Mingyu Lin"
 zh = "林明宇"
+avatar = "/images/avatars/mingyu-lin.webp"
 
 [[alumniPhd]]
 en = "Yucheng Ding"
