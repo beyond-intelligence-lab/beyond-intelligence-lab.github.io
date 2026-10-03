@@ -7,11 +7,12 @@
 #   [[alumniPhd]]      已毕业博士生
 #   [[alumniMaster]]   已毕业硕士生
 #
-# en / zh 必填，avatar / homepage / first_position 可选：
+# en / zh 必填，avatar / homepage / title / first_position 可选：
 #   en = "Chaoyue Niu"                          英文界面显示的名字
 #   zh = "牛超越"                                中文界面显示的名字
 #   avatar = "/images/avatars/chaoyue-niu.webp" 头像放 public/images/avatars/；不写则显示姓名首字母
 #   homepage = "https://unikeen.github.io"      个人主页（可选）；写了名字就变成链接，点击跳转
+#   title = { en = "Distinguished Professor", zh = "特聘教授" }  职称；随界面语言显示
 #   first_position = { en = "ByteDance", zh = "字节跳动" }  毕业后的首个工作单位；不写则不显示
 #
 # 拼错分组名或字段名会在开发时报错、构建（CI）时直接失败，不会静默丢人。
@@ -19,12 +20,14 @@
 [[teacher]]
 en = "Fan Wu"
 zh = "吴帆"
+title = { en = "Distinguished Professor", zh = "特聘教授" }
 avatar = "/images/avatars/fan-wu.webp"
 homepage = "https://www.cs.sjtu.edu.cn/en/jiaoshiml/wufan.html"
 
 [[teacher]]
 en = "Chaoyue Niu"
 zh = "牛超越"
+title = { en = "Tenure-track Associate Professor", zh = "长聘教轨副教授" }
 avatar = "/images/avatars/chaoyue-niu.webp"
 homepage = "https://www.cs.sjtu.edu.cn/en/jiaoshiml/niuchaoyue.html"
 

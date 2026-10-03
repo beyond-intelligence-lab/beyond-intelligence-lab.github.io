@@ -1,6 +1,19 @@
-.projects__placeholder {
-  max-width: 46rem;
+.section.projects-page {
+  padding-block-start: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.projects-callout {
+  display: flex;
+  gap: 0.9rem;
+  padding: 0.8rem clamp(1.1rem, 2.2vw, 1.5rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--bg-subtle);
   color: var(--text-muted);
-  font-size: var(--step-1);
-  line-height: 1.6;
+  line-height: 1.5;
+}
+
+.projects-callout__icon {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
 }

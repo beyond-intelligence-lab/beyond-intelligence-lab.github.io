@@ -1,4 +1,5 @@
 import PageHeader from '../components/PageHeader'
+import { ConstructionIcon } from '../components/icons'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { useI18n } from '../i18n'
 import './Projects.css'
@@ -10,9 +11,12 @@ export default function Projects() {
   return (
     <>
       <PageHeader title={t.nav.projects} />
-      <section className="section">
+      <section className="section projects-page">
         <div className="container">
-          <p className="projects__placeholder">{t.projects.placeholder}</p>
+          <aside className="projects-callout">
+            <ConstructionIcon className="projects-callout__icon" />
+            <p>{t.projects.placeholder}</p>
+          </aside>
         </div>
       </section>
     </>

@@ -2,6 +2,7 @@ import {
   ArrowRight,
   Blocks,
   Code,
+  Construction,
   ExternalLink,
   FileText,
   Info,
@@ -67,6 +68,10 @@ export function ExternalLinkIcon({ className }: IconProps) {
 
 export function InfoIcon({ className }: IconProps) {
   return <Info {...base} className={className} />
+}
+
+export function ConstructionIcon({ className }: IconProps) {
+  return <Construction {...base} className={className} />
 }
 
 export function ResearchIcon({ className }: IconProps) {

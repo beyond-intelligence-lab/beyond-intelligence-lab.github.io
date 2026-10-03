@@ -30,13 +30,15 @@ export type Member = {
   avatar?: string
   /** Personal page — http(s) or a site path. The name becomes a link. */
   homepage?: string
+  /** Academic title, shown below the member's name. */
+  title?: { en: string; zh: string }
   /** First employer after graduation, shown below the alumnus's name. */
   firstPosition?: { en: string; zh: string }
 }
 
 export type GroupData = Record<GroupSectionId, readonly Member[]>
 
-const MEMBER_KEYS = ['en', 'zh', 'avatar', 'homepage', 'first_position']
+const MEMBER_KEYS = ['en', 'zh', 'avatar', 'homepage', 'title', 'first_position']
 
 export function parseGroupData(raw: unknown, label = 'group.toml'): GroupData {
   const problems: string[] = []
@@ -102,6 +104,25 @@ export function parseGroupData(raw: unknown, label = 'group.toml'): GroupData {
           }
         }
 
+        let title: Member['title']
+        if (value.title !== undefined) {
+          const rawTitle = value.title
+          if (!isRecord(rawTitle)) {
+            fail(`${where}.title`, '必须是包含 en 和 zh 的表')
+          } else {
+            for (const key of Object.keys(rawTitle)) {
+              if (key !== 'en' && key !== 'zh') {
+                fail(`${where}.title`, `未知字段 "${key}"（允许：en, zh）`)
+              }
+            }
+            const titleEn = readString(rawTitle.en)
+            const titleZh = readString(rawTitle.zh)
+            if (!titleEn) fail(`${where}.title`, '缺少非空的 "en"（英文职称）')
+            if (!titleZh) fail(`${where}.title`, '缺少非空的 "zh"（中文职称）')
+            if (titleEn && titleZh) title = { en: titleEn, zh: titleZh }
+          }
+        }
+
         let firstPosition: Member['firstPosition']
         if (value.first_position !== undefined) {
           const position = value.first_position
@@ -121,7 +142,7 @@ export function parseGroupData(raw: unknown, label = 'group.toml'): GroupData {
           }
         }
 
-        if (en && zh) members.push({ en, zh, avatar, homepage, firstPosition })
+        if (en && zh) members.push({ en, zh, avatar, homepage, title, firstPosition })
       })
     }
 
